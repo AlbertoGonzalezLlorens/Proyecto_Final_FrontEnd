@@ -4,6 +4,13 @@
   height: 80px;
   position: relative;
   box-shadow: 0px 0px 50px 50px rgb(237, 200, 200);
+<<<<<<< Updated upstream
+=======
+  margin-bottom:2vh;
+  margin-top:2vh;
+  margin-left: 2vh;
+  margin-right:2vh;
+>>>>>>> Stashed changes
 }
 .logo{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
