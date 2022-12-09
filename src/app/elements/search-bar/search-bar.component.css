@@ -1,0 +1,16 @@
+/*busqueda*/
+.tm-home-section-1{
+  padding-top: 1vh;
+}
+.input-group{
+  background-color: rgb(253, 232, 232);
+}
+.form-control{
+  background: rgb(237, 200, 200);
+}
+.columna-medio{
+  border: 1px rgb(181, 181, 181) solid;
+  padding-bottom: 1vh;
+  border-radius: 1vh;
+  background-color: rgb(253, 232, 232);
+}

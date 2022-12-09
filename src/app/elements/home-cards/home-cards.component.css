@@ -1,0 +1,13 @@
+/*Cards*/
+.cards{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.visitado{
+  color: gray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+.cartas{
+  padding-left: 5vh;
+}

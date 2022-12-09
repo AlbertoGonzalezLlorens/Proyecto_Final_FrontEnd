@@ -1,0 +1,22 @@
+/* Header*/
+.tm-header{
+  background: rgb(237, 200, 200);
+  height: 80px;
+  position: relative;
+  box-shadow: 0px 0px 50px 50px rgb(237, 200, 200);
+}
+.logo{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 4vh;
+  color: #f70577;
+}
+.col2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 3vh;
+}
+.objeto{
+  color: #f70577;
+}
+
