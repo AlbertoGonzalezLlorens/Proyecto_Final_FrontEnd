@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { ElementsModule } from "./elements/elements.module";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { ElementsModule } from "./elements/elements.module";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ElementsModule
+        ElementsModule,
+        FormsModule
     ]
 })
 export class AppModule { }
