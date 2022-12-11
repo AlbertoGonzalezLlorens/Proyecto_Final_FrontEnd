@@ -17,3 +17,4 @@
   border-radius: 1vh;
   background-color: rgb(253, 232, 232);
 }
+::placeholder { color: black; }
