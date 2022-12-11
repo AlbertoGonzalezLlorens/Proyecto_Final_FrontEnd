@@ -5,6 +5,7 @@ import { BannerComponent } from './banner/banner.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { NewformComponent } from './newform/newform.component';
+import { MapaComponent } from '../mapa/mapa.component';
 
 
 
@@ -14,7 +15,8 @@ import { NewformComponent } from './newform/newform.component';
     BannerComponent,
     SearchBarComponent,
     HomeCardsComponent,
-    NewformComponent
+    NewformComponent,
+    MapaComponent,
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { NewformComponent } from './newform/newform.component';
     BannerComponent,
     SearchBarComponent,
     HomeCardsComponent,
-    NewformComponent
+    NewformComponent,
+    MapaComponent,
   ]
 })
 export class ElementsModule { }
