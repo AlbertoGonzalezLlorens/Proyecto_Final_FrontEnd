@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { ElementsModule } from "./elements/elements.module";
 import { FormsModule } from '@angular/forms';
+import { MapaComponent } from './mapa/mapa.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
         ContactComponent,
         LoginComponent,
         RegisterComponent,
-        SearchComponent
+        SearchComponent,
+
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -28,7 +30,7 @@ import { FormsModule } from '@angular/forms';
         BrowserModule,
         AppRoutingModule,
         ElementsModule,
-        FormsModule
+        FormsModule,
     ]
 })
 export class AppModule { }
