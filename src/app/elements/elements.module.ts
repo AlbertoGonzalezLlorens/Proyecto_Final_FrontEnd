@@ -10,6 +10,7 @@ import { CartaloginComponent } from './cartalogin/cartalogin.component';
 import { CartaloginenlaceComponent } from './cartaloginenlace/cartaloginenlace.component';
 import { CartaregisterComponent } from './cartaregister/cartaregister.component';
 import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregisterenlace.component';
+import { CardhotelsComponent } from './cardhotels/cardhotels.component';
 
 
 
@@ -25,6 +26,7 @@ import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregiste
     CartaloginenlaceComponent,
     CartaregisterComponent,
     CartaregisterenlaceComponent,
+    CardhotelsComponent,
   ],
   imports: [
     CommonModule
@@ -40,6 +42,7 @@ import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregiste
     CartaloginenlaceComponent,
     CartaregisterComponent,
     CartaregisterenlaceComponent,
+    CardhotelsComponent
   ]
 })
 export class ElementsModule { }
