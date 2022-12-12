@@ -1,6 +1,7 @@
-.col{
-    height:30vh;
+.row{
+    background-color: rgb(246, 234, 234);
 }
 .imagen-hotel{
-    height:100%;
+    height:30vh;
+    width:30vh;
 }
