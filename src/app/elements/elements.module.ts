@@ -6,6 +6,10 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { NewformComponent } from './newform/newform.component';
 import { MapaComponent } from '../mapa/mapa.component';
+import { CartaloginComponent } from './cartalogin/cartalogin.component';
+import { CartaloginenlaceComponent } from './cartaloginenlace/cartaloginenlace.component';
+import { CartaregisterComponent } from './cartaregister/cartaregister.component';
+import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregisterenlace.component';
 
 
 
@@ -17,6 +21,10 @@ import { MapaComponent } from '../mapa/mapa.component';
     HomeCardsComponent,
     NewformComponent,
     MapaComponent,
+    CartaloginComponent,
+    CartaloginenlaceComponent,
+    CartaregisterComponent,
+    CartaregisterenlaceComponent,
   ],
   imports: [
     CommonModule
@@ -28,6 +36,10 @@ import { MapaComponent } from '../mapa/mapa.component';
     HomeCardsComponent,
     NewformComponent,
     MapaComponent,
+    CartaloginComponent,
+    CartaloginenlaceComponent,
+    CartaregisterComponent,
+    CartaregisterenlaceComponent,
   ]
 })
 export class ElementsModule { }

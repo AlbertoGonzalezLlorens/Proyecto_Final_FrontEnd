@@ -1,83 +1,12 @@
 <app-header></app-header>
-
 <div class="container-fluid d-flex justify-content-center">
-    <div class="row ">
-      <div class="col-12 col-lg-6">
-        <div class="card" style="--bs-bg-opacity: .5;border:1px black solid; background-color:rgb(252, 240, 165);width: 65vh; height: 75vh;">
-            <div class="card-body">
-                <h2 class="fw-bold mb-5" style="text-align: center;color:#f70577; margin-top:25vh">Log in</h2>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn" href="/login" role="button" style="border:0px;background-color:rgb(253, 175, 175); margin-top:1vh;">Log in</a>
-                </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-12 col-lg-6 card1">
-        <div class="card" style="--bs-bg-opacity: .5;border:1px black solid; background-color:rgb(253, 175, 175);width: 65vh; height: 75vh;">
-            <div class="card-body py-5 px-md-5">
-              <form style=" margin-top: 20vh; margin-bottom: 24vh;">
-                <h2 class="fw-bold mb-5" style="text-align: center;color:#f70577;">Register</h2>
-
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input
-                          type="text"
-                          id="form3Example1"
-                          class="form-control"
-                          placeholder="First name"
-                          style="background: rgb(237, 200, 200);"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input
-                          type="text"
-                          id="form3Example2"
-                          class="form-control"
-                          placeholder="Last name"
-                          style="background: rgb(237, 200, 200);"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input
-                          type="text"
-                          id="form3Example1"
-                          class="form-control"
-                          placeholder="User"
-                          style="background: rgb(237, 200, 200);"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input
-                        type="password"
-                        id="form3Example4"
-                        class="form-control"
-                        placeholder="Password"
-                        style="background: rgb(237, 200, 200);"
-                  />
-
-                      </div>
-                    </div>
-                  </div>
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="user" id="form3Example3" class="form-control" placeholder="Email" style="background: rgb(237, 200, 200);"/>
-                </div>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                  <a class="btn" href="#" role="button" style="background-color:rgb(252, 240, 165);">Register</a>
-                </div>
-              </form>
-            </div>
-          </div>
-      </div>
+  <div class="row ">
+    <div class="col-12 col-lg-6 cartas d-flex justify-content-center">
+      <app-cartaregisterenlace></app-cartaregisterenlace>
+    </div>
+    <div class="col-12 col-lg-6 cartas d-flex justify-content-center">
+      <app-cartaregister></app-cartaregister>
     </div>
   </div>
+</div>
+
