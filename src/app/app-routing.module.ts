@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { HotelComponent } from './hotel/hotel.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path:'search',
     component: SearchComponent
+  },
+  {
+    path:'hotel',
+    component: HotelComponent
   },
 ];
 

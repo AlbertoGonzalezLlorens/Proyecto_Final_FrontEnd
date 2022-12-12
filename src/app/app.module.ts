@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { ElementsModule } from "./elements/elements.module";
 import { FormsModule } from '@angular/forms';
 import { MapaComponent } from './mapa/mapa.component';
+import { HotelComponent } from './hotel/hotel.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { MapaComponent } from './mapa/mapa.component';
         LoginComponent,
         RegisterComponent,
         SearchComponent,
+        HotelComponent,
 
     ],
     providers: [],
