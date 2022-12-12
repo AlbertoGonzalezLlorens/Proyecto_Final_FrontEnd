@@ -22,14 +22,22 @@ export class MapaComponent implements OnInit{
 
   cargarMapa(): any{
 
+    const centro = { lat: 41.11667, lng: 1.25 };
+
     const opciones = {
-      center: new google.maps.LatLng(41.11667, 1.25),
+      center: centro,
       zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-    console.log(opciones);
+
     this.mapa = new google.maps.Map(document.getElementById("map") as HTMLElement,opciones)
+
+    const marker = new google.maps.Marker({
+      position: centro,
+      map: this.mapa,
+    });
   };
+
 
 }
 
