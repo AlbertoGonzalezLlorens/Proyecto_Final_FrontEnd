@@ -11,6 +11,7 @@ import { CartaloginenlaceComponent } from './cartaloginenlace/cartaloginenlace.c
 import { CartaregisterComponent } from './cartaregister/cartaregister.component';
 import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregisterenlace.component';
 import { CardhotelsComponent } from './cardhotels/cardhotels.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 
 
@@ -27,6 +28,7 @@ import { CardhotelsComponent } from './cardhotels/cardhotels.component';
     CartaregisterComponent,
     CartaregisterenlaceComponent,
     CardhotelsComponent,
+    DatepickerComponent,
   ],
   imports: [
     CommonModule
@@ -42,7 +44,8 @@ import { CardhotelsComponent } from './cardhotels/cardhotels.component';
     CartaloginenlaceComponent,
     CartaregisterComponent,
     CartaregisterenlaceComponent,
-    CardhotelsComponent
+    CardhotelsComponent,
+    DatepickerComponent
   ]
 })
 export class ElementsModule { }
