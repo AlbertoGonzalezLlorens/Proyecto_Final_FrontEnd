@@ -42,19 +42,16 @@
         </div>
     </div>
 </div>
-<div class="container-fluid"
-    style="margin-top:4vh;padding-top:2vh;margin-bottom:4vh;">
+<div class="container rounded" style="margin-top:4vh;margin-bottom:4vh;border:2px rgb(181, 37, 37) solid;">
     <div class="row justify-content-center" style="background-color: rgba(255, 188, 188, 0.603);
-    border-right:rgb(181, 37, 37) solid;border-left:rgb(181, 37, 37) solid;border-top:rgb(181, 37, 37) solid;
-    padding-bottom:2vh;padding-top:2vh;margin-left:5vh; margin-right:10vh;">
+    padding-bottom:2vh;padding-top:2vh;">
         <h4 style="text-align: center; margin-bottom:5vh;"> Make your reservation</h4>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
-            <select class="form-control" id="pickaroom"
-                style="background: rgb(209, 129, 129);width:20vh;">
-                <option>Pick a Room</option>
-                <option>Normal</option>
-                <option>Low Cost</option>
-                <option>VIP</option>
+            <select class="form-control" [(ngModel)]="text" style="background: rgb(209, 129, 129);width:20vh;">
+                <option value=0>Pick a Room</option>
+                <option value=1>Normal</option>
+                <option value=2>Low Cost</option>
+                <option value=3>VIP</option>
             </select>
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
@@ -64,7 +61,7 @@
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
-                <option>4</option>
+                <option>4 </option>
             </select>
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
@@ -80,8 +77,9 @@
             </div>
         </div>
     </div>
-    <div class="row" style="border-right:rgb(181, 37, 37) solid;border-left:rgb(181, 37, 37) solid;border-bottom:rgb(181, 37, 37) solid;
-    background-color: rgba(255, 188, 188, 0.603); margin-left:5vh; margin-right:10vh; padding-top:5vh;padding-bottom:5vh;">
+    <div class="row" *ngIf="text!=0"
+        style="
+    background-color: rgba(255, 188, 188, 0.603); padding-top:5vh;padding-bottom:5vh;">
         <div class="col-12 col-xs-12 col-mg-12 col-lg-4 col-xl-6 d-flex align-items-center justify-content-center"
             style="z-index:100;">
             <img class="imagen-hotel rounded  " src="../../assets/img/hotel_in_barcelona.png" alt="hotee_barcelona">
@@ -89,7 +87,8 @@
         <div class="col-12 col-xs-12 col-mg-12 col-lg-8 col-xl-6 rounded" style="padding-right:5vh;">
 
             <h5 style="text-align: center; padding-top:1vh;">Room information</h5>
-            <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;margin-bottom:0vh">"Lorem ipsum dolor
+            <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;margin-bottom:0vh">"Lorem ipsum
+                dolor
                 sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -103,4 +102,3 @@
         </div>
     </div>
 </div>
-

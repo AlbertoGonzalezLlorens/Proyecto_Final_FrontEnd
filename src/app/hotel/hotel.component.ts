@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-hotel',
@@ -10,6 +11,7 @@ export class HotelComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  text:any = document.getElementById("pickaroom") as HTMLInputElement;
+
+  text:any=0;
 
 }
