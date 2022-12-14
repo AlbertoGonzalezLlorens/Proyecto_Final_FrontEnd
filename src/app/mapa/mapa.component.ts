@@ -1,7 +1,7 @@
 ///<reference path="../../../node_modules/@types/google.maps/index.d.ts"/>
 
 import { Component, OnInit } from '@angular/core';
-import { Loader } from "@googlemaps/js-api-loader";
+
 
 @Component({
   selector: 'app-mapa',
