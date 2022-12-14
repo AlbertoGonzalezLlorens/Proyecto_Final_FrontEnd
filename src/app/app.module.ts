@@ -13,6 +13,7 @@ import { ElementsModule } from "./elements/elements.module";
 import { FormsModule } from '@angular/forms';
 import { MapaComponent } from './mapa/mapa.component';
 import { HotelComponent } from './hotel/hotel.component';
+import { VisorComponent } from './visor/visor.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,7 @@ import { HotelComponent } from './hotel/hotel.component';
         RegisterComponent,
         SearchComponent,
         HotelComponent,
-
+        VisorComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

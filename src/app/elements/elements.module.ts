@@ -12,6 +12,7 @@ import { CartaregisterComponent } from './cartaregister/cartaregister.component'
 import { CartaregisterenlaceComponent } from './cartaregisterenlace/cartaregisterenlace.component';
 import { CardhotelsComponent } from './cardhotels/cardhotels.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { HeaderUsuarioComponent } from './header-usuario/header-usuario.component';
 
 
 
@@ -29,6 +30,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     CartaregisterenlaceComponent,
     CardhotelsComponent,
     DatepickerComponent,
+    HeaderUsuarioComponent,
   ],
   imports: [
     CommonModule
@@ -45,7 +47,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     CartaregisterComponent,
     CartaregisterenlaceComponent,
     CardhotelsComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    HeaderUsuarioComponent
   ]
 })
 export class ElementsModule { }
