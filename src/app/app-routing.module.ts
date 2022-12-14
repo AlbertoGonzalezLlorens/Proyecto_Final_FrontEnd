@@ -7,7 +7,8 @@ import { HotelComponent } from './hotel/hotel.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
-import { VisorComponent } from './visor/visor.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { ReservasComponent } from './reservas/reservas.component';
 
 const routes: Routes = [
   {
@@ -39,8 +40,12 @@ const routes: Routes = [
     component: HotelComponent
   },
   {
-    path:'visor',
-    component: VisorComponent
+    path:'usuario',
+    component: UsuarioComponent
+  },
+  {
+    path:'reservas',
+    component: ReservasComponent
   }
 ];
 
