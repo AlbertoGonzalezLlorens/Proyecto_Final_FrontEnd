@@ -1,6 +1,8 @@
 ///<reference path="../../../node_modules/@types/google.maps/index.d.ts"/>
 
 import { Component, OnInit } from '@angular/core';
+import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
+import { ShareMapsDataService } from '../share-maps-data.service';
 
 
 @Component({
@@ -13,32 +15,76 @@ import { Component, OnInit } from '@angular/core';
 
 export class MapaComponent implements OnInit{
 
-  mapa!: google.maps.Map;
-  ngOnInit(): void {
+  @ViewChild('divMap') divMap!: ElementRef;
+  @ViewChild('inputPlaces') inputPlaces!: ElementRef;
 
-    this.cargarMapa();
+  mapa!: google.maps.Map;
+  markers: google.maps.Marker[];
+  distancia!: string;
+  autocomplete: any;
+
+
+  constructor(private renderer: Renderer2, private shareDataService: ShareMapsDataService) {
+    this.markers = [];
+
 
   }
 
-  cargarMapa(): any{
+  ngOnInit(): void {
+  }
 
-    const centro = { lat: 41.11667, lng: 1.25 };
+  ngAfterViewInit(): void {
 
     const opciones = {
-      center: centro,
-      zoom: 14,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
     }
 
-    this.mapa = new google.maps.Map(document.getElementById("map") as HTMLElement,opciones)
+    if (navigator.geolocation) {
 
-    const marker = new google.maps.Marker({
-      position: centro,
-      map: this.mapa,
+      navigator.geolocation.getCurrentPosition(async (position) => {
+
+        await this.cargarMapa();
+        //this.cargarAutocomplete();
+
+      }, null, opciones);
+
+
+    } else {
+      console.log("navegador no compatible")
+    }
+
+  };
+
+
+
+
+
+
+
+
+
+
+
+  cargarMapa(): any {
+
+    const opciones = {
+      center: new google.maps.LatLng(this.shareDataService.latitud, this.shareDataService.longitud),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    this.mapa = new google.maps.Map(this.renderer.selectRootElement(this.divMap.nativeElement), opciones)
+
+    /*const markerPosition = new google.maps.Marker({
+      position: this.mapa.getCenter(),
+      title: "David",
     });
+
+    markerPosition.setMap(this.mapa);
+    this.markers.push(markerPosition);*/
   };
 
 
 }
-
-
