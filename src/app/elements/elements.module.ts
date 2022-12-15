@@ -17,6 +17,7 @@ import { PopupComponent } from './popup/popup.component';
 import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
 import { FormularioUsuarioFotoComponent } from './formulario-usuario-foto/formulario-usuario-foto.component';
 import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 
 
@@ -39,6 +40,7 @@ import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
     FormularioUsuarioComponent,
     FormularioUsuarioFotoComponent,
     FichaReservaComponent,
+    PdfComponent,
   ],
   imports: [
     CommonModule
@@ -60,7 +62,8 @@ import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
     PopupComponent,
     FormularioUsuarioComponent,
     FormularioUsuarioFotoComponent,
-    FichaReservaComponent
+    FichaReservaComponent,
+    PdfComponent
   ]
 })
 export class ElementsModule { }
