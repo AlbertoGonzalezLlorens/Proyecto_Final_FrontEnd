@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row justify-content-start" style="margin-bottom:2vh;" *ngIf="appear==false">
+        <div class="col-6">
+            <div class="form-controll">
+                <label for="floatingInput">Nombre</label>
+                <input
+                  type="text"
+                  id="floatingInput"
+                  class="form-control"
+                  placeholder="Alberto"
+                  style="background: rgb(237, 200, 200);" disabled
+                />
+              </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-controll">
+                <label for="floatingInput">Apellidos</label>
+                <input
+                  type="text"
+                  id="floatingInput"
+                  class="form-control"
+                  placeholder="González Llorens"
+                  style="background: rgb(237, 200, 200);" disabled
+                />
+              </div>
+        </div>
+    </div>
+    <div class="row justify-content-start" style="margin-bottom:2vh;" *ngIf="appear==true">
+      <div class="col-6">
+          <div class="form-floating mb-4">
+              <input
+                type="text"
+                id="floatingInput1"
+                class="form-control"
+                placeholder="Alberto"
+                style="background: rgb(237, 200, 200);"
+              />
+              <label for="floatingInput1">Nombre</label>
+            </div>
+      </div>
+
+      <div class="col-6">
+          <div class="form-floating mb-4">
+              <input
+                type="text"
+                id="floatingInput2"
+                class="form-control"
+                placeholder="González Llorens"
+                style="background: rgb(237, 200, 200);"
+              />
+              <label for="floatingInput2">Apellidos</label>
+            </div>
+      </div>
+  </div>
+    <div class="row justify-content-start" style="margin-bottom:2vh;" *ngIf="appear==false">
+        <div class="col-6">
+            <div class="form-controll">
+                <label for="floatingInput">Email</label>
+                <input
+                  type="text"
+                  id="floatingInput"
+                  class="form-control"
+                  placeholder="Jibiri-jibir@jibiri.com"
+                  style="background: rgb(237, 200, 200);" disabled
+                />
+              </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-controll">
+                <label for="floatingInput">Telefono</label>
+                <input
+                  type="text"
+                  id="floatingInput"
+                  class="form-control"
+                  placeholder="6XXXXXXXX"
+                  style="background: rgb(237, 200, 200);" disabled
+                />
+              </div>
+        </div>
+    </div>
+    <div class="row justify-content-start" style="margin-bottom:2vh;" *ngIf="appear==true">
+      <div class="col-6">
+          <div class="form-floating mb-4">
+              <input
+                type="text"
+                id="floatingInput3"
+                class="form-control"
+                placeholder="Jibiri-jibir@jibiri.com"
+                style="background: rgb(237, 200, 200);"
+              />
+              <label for="floatingInput3">Email</label>
+            </div>
+      </div>
+
+      <div class="col-6">
+          <div class="form-floating">
+              <input
+                type="text"
+                id="floatingInput"
+                class="form-control"
+                placeholder="6XXXXXXXX"
+                style="background: rgb(237, 200, 200);"
+              />
+              <label for="floatingInput">Telefono</label>
+            </div>
+      </div>
+  </div>
+    <div class="row" *ngIf="appear==false">
+        <button type="button" class="btn btn-danger col-4 mx-auto" (click)="aparecer()">Modificar Datos</button>
+    </div>
+    <div class="row" *ngIf="appear==true">
+      <button type="button" class="btn btn-danger col-3 mx-auto" (click)="desvanecer()">Guardar</button>
+      <button type="button" class="btn btn-danger col-3 mx-auto" (click)="desvanecer()">Cerrar</button>
+  </div>
+</div>

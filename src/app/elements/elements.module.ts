@@ -14,6 +14,9 @@ import { CardhotelsComponent } from './cardhotels/cardhotels.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { HeaderUsuarioComponent } from './header-usuario/header-usuario.component';
 import { PopupComponent } from './popup/popup.component';
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';
+import { FormularioUsuarioFotoComponent } from './formulario-usuario-foto/formulario-usuario-foto.component';
+import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
 
 
 
@@ -33,6 +36,9 @@ import { PopupComponent } from './popup/popup.component';
     DatepickerComponent,
     HeaderUsuarioComponent,
     PopupComponent,
+    FormularioUsuarioComponent,
+    FormularioUsuarioFotoComponent,
+    FichaReservaComponent,
   ],
   imports: [
     CommonModule
@@ -51,7 +57,10 @@ import { PopupComponent } from './popup/popup.component';
     CardhotelsComponent,
     DatepickerComponent,
     HeaderUsuarioComponent,
-    PopupComponent
+    PopupComponent,
+    FormularioUsuarioComponent,
+    FormularioUsuarioFotoComponent,
+    FichaReservaComponent
   ]
 })
 export class ElementsModule { }
