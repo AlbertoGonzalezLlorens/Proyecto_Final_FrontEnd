@@ -18,6 +18,7 @@ import { HotelComponent } from './hotel/hotel.component';
 import { VisorComponent } from './visor/visor.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
+import { RecargaMapsDirective } from './directives/recarga-maps.directive';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { ReservasComponent } from './reservas/reservas.component';
         VisorComponent,
         UsuarioComponent,
         ReservasComponent,
+        RecargaMapsDirective,
     ],
     providers: [],
     bootstrap: [AppComponent],

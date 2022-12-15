@@ -5,11 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class ShareMapsDataService {
 
-  latitud: any;
-  longitud: any;
-  location: any;
+  public numero: number = 0;
+  public latitud: any = 41.14295925588751;
+  public longitud: any = 1.12925861511575;
 
   constructor() { }
+  setNumero(numero: number){
+    this.numero=numero
+  }
   setLatitud(lat: any){
     this.latitud=lat;
   }
@@ -22,11 +25,9 @@ export class ShareMapsDataService {
   getLongitud(){
     return this.longitud;
   }
-  setLocation(loc: any){
-    this.location=loc;
-  }
-  getLocation(){
-    return this.location;
+  patata(){
+    this.numero +=1;
+
   }
 
 }
