@@ -18,6 +18,7 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
 import { FormularioUsuarioFotoComponent } from './formulario-usuario-foto/formulario-usuario-foto.component';
 import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { AppRoutingModule } from './../app-routing.module';
 
 
 
@@ -43,7 +44,8 @@ import { PdfComponent } from './pdf/pdf.component';
     PdfComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,

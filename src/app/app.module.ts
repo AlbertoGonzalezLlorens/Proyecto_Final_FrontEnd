@@ -20,6 +20,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { RecargaMapsDirective } from './directives/recarga-maps.directive';
 import {HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -43,7 +44,8 @@ import {HttpClientModule} from '@angular/common/http';
         AppRoutingModule,
         ElementsModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterModule
     ]
 })
 export class AppModule { }

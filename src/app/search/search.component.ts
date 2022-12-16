@@ -12,6 +12,7 @@ import { ContadorService } from 'src/app/services/contador.service';
 export class SearchComponent implements OnInit {
 
   hoteles: any;
+  hotelesFiltrados: any;
   contResultados: number = 0;
 
   constructor(public shareDataService: ShareMapsDataService, private http: HttpClient, public contadorService: ContadorService) { }
@@ -24,7 +25,9 @@ export class SearchComponent implements OnInit {
       this.hoteles=result;
     },
     error => {console.log("Problemitas");})
+
   }
+
 
   sumarResultado(){
     this.contResultados++;

@@ -113,13 +113,17 @@ export class SearchBarComponent implements OnInit {
 
       this.shareDataService.setLatitud(place.geometry.location.lat())
       this.shareDataService.setLongitud(place.geometry.location.lng())
-      this.shareDataService.setCiudad(place.address_components[0].long_name)
+      //this.shareDataService.setCiudad(place.address_components[0].long_name)
       if ((place.address_components[0].long_name == place.address_components[place.address_components.length -1].long_name)){
-        this.shareDataService.setPais(null)
+        this.shareDataService.setCiudad(null)
+        this.shareDataService.setPais(place.address_components[place.address_components.length -1].long_name)
       }
       else{
         this.shareDataService.setPais(place.address_components[place.address_components.length -1].long_name)
+        this.shareDataService.setCiudad(place.address_components[0].long_name)
       }
+
+      console.log(this.shareDataService)
 
       this.shareDataService.patata()
       this.contadorService.setContador0()

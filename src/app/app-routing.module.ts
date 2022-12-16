@@ -47,11 +47,13 @@ const routes: Routes = [
     path:'reservas',
     component: ReservasComponent
   },
+  { path: '', redirectTo:'/home-page', pathMatch:'full'},
   {
     path:'**',
     pathMatch: 'full',
     redirectTo: 'home-page'
-  }
+  },
+
 ];
 
 @NgModule({

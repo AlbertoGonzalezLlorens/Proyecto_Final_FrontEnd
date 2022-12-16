@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ContadorService } from 'src/app/services/contador.service';
+
 
 @Component({
   selector: 'app-cardhotels',
@@ -7,6 +8,8 @@ import { ContadorService } from 'src/app/services/contador.service';
   styleUrls: ['./cardhotels.component.css']
 })
 export class CardhotelsComponent implements OnInit{
+
+  @Input() hotel: any;
 
   constructor(public contadorService: ContadorService){}
   ngOnInit(): void {
