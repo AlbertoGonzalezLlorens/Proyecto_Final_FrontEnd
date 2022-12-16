@@ -5,8 +5,14 @@
         <div class="col-12" style="height:40vh;padding-bottom:2vh;"><app-mapa *appRecargaMaps="shareDataService.numero"></app-mapa></div>
     </div>
 </div>
-<div class="container-fluid mt-4 mb-4">
-    <div class="row">
-        <app-cardhotels></app-cardhotels>
+<div *ngIf="hoteles!=null; else espera" class="container-fluid mt-4 mb-4">
+    <div *ngFor="let hotel of hoteles" class="row" style="margin-bottom: 2vh;">
+        <div *ngIf="hotel.poblacion==shareDataService.ciudad">
+          <app-cardhotels></app-cardhotels>
+        </div>
+    </div>
+    <div *ngIf="contadorService.contador==0" >
+      No se ha encontrado ningún resultado
     </div>
 </div>
+<ng-template #espera>Buscando tus hoteles...</ng-template>

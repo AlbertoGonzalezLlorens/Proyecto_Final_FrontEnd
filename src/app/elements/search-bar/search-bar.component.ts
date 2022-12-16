@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 import { FormControl, FormGroup } from '@angular/forms';
 import { ShareMapsDataService } from '../../share-maps-data.service';
+import { ContadorService } from 'src/app/services/contador.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -21,7 +22,7 @@ export class SearchBarComponent implements OnInit {
   mapaComp: any;
 
 
-  constructor(private renderer: Renderer2, private shareDataService: ShareMapsDataService) {
+  constructor(private renderer: Renderer2, private shareDataService: ShareMapsDataService, public contadorService: ContadorService) {
     this.markers = [];
 
     this.formMapas = new FormGroup({
@@ -103,10 +104,25 @@ export class SearchBarComponent implements OnInit {
       this.llenarFormulario(place);
       console.log("latitud",place.geometry.location.lat())
       console.log("longitud",place.geometry.location.lng())
+      console.log(place.address_components[0].long_name)
+      /*asdf: [] = place.address_components
+      length= place*/
+      //console.log(place.address_components[place.address_components.length -1].long_name)
+      //console.log(place.geometry.location.country)
+
 
       this.shareDataService.setLatitud(place.geometry.location.lat())
       this.shareDataService.setLongitud(place.geometry.location.lng())
+      this.shareDataService.setCiudad(place.address_components[0].long_name)
+      if ((place.address_components[0].long_name == place.address_components[place.address_components.length -1].long_name)){
+        this.shareDataService.setPais(null)
+      }
+      else{
+        this.shareDataService.setPais(place.address_components[place.address_components.length -1].long_name)
+      }
+
       this.shareDataService.patata()
+      this.contadorService.setContador0()
 
     })
   }

@@ -19,6 +19,7 @@ import { VisorComponent } from './visor/visor.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { RecargaMapsDirective } from './directives/recarga-maps.directive';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -42,6 +43,7 @@ import { RecargaMapsDirective } from './directives/recarga-maps.directive';
         AppRoutingModule,
         ElementsModule,
         FormsModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
