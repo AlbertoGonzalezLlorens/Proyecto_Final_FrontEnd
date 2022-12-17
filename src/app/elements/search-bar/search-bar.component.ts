@@ -117,11 +117,14 @@ export class SearchBarComponent implements OnInit {
       if ((place.address_components[0].long_name == place.address_components[place.address_components.length -1].long_name)){
         this.shareDataService.setCiudad(null)
         this.shareDataService.setPais(place.address_components[place.address_components.length -1].long_name)
+        this.shareDataService.setZoom(6)
       }
       else{
         this.shareDataService.setPais(place.address_components[place.address_components.length -1].long_name)
         this.shareDataService.setCiudad(place.address_components[0].long_name)
+        this.shareDataService.setZoom(12)
       }
+
 
       console.log(this.shareDataService)
 

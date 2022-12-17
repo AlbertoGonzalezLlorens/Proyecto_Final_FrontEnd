@@ -71,7 +71,7 @@ export class MapaComponent implements OnInit{
 
     const opciones = {
       center: new google.maps.LatLng(this.shareDataService.latitud, this.shareDataService.longitud),
-      zoom: 12,
+      zoom: this.shareDataService.zoom,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 

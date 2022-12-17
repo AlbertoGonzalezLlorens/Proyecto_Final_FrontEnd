@@ -10,7 +10,7 @@ export class ShareMapsDataService {
   public longitud: any = 1.12925861511575;
   public ciudad: any
   public pais: any
-  public locFinal: any
+  public zoom: any = 2
 
   constructor() { }
   setNumero(numero: number){
@@ -33,6 +33,9 @@ export class ShareMapsDataService {
   }
   setPais(pais: any){
     this.pais=pais
+  }
+  setZoom(zoom: any){
+    this.zoom = zoom
   }
   patata(){
     this.numero +=1;
