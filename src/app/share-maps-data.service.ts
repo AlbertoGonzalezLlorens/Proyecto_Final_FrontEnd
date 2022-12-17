@@ -11,7 +11,7 @@ export class ShareMapsDataService {
   public ciudad: any
   public pais: any
   public zoom: any = 2
-  public hoteles: any = null
+  public hoteles: any = []
 
   constructor() { }
   setNumero(numero: number){
@@ -37,6 +37,9 @@ export class ShareMapsDataService {
   }
   setZoom(zoom: any){
     this.zoom = zoom
+  }
+  setHoteles(hoteles: any){
+    this.hoteles=hoteles
   }
   patata(){
     this.numero +=1;

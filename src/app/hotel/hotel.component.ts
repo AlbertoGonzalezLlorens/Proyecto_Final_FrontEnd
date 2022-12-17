@@ -24,7 +24,7 @@ export class HotelComponent implements OnInit {
       this.habitaciones=result;
     },
     )
-
+    let s= "proyectofinalapi-production-7f34.up.railway.app/hoteles/contactos/(id_hotel"+this.consultaService.hoteles+")"
     this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/contactos").subscribe(patata=>{
       this.contactos=patata;
       this.contacto1=this.contactos[0];

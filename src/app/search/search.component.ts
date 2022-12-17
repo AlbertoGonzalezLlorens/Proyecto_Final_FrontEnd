@@ -23,9 +23,10 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles").subscribe(result=>{
       this.hoteles=result;
-    },
-    error => {console.log("Problemitas");})
-    this.shareDataService.hoteles = this.hoteles
+      this.shareDataService.setHoteles(this.hoteles)
+    }
+    )
+
   }
 
 
