@@ -20,12 +20,12 @@ export class HotelComponent implements OnInit {
 
   text: any = 0
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/habitaciones").subscribe(result=>{
+    this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/habitaciones").subscribe(result=>{
       this.habitaciones=result;
     },
     error => {console.log("Problemitas");})
 
-    this.http.get("http://localhost:3000/contactos").subscribe(patata=>{
+    this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/contactos").subscribe(patata=>{
       this.contactos=patata;
     },
     error => {console.log("Problemitas");})

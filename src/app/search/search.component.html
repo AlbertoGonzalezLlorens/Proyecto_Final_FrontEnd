@@ -7,7 +7,6 @@
 </div>
 <div *ngIf="hoteles!=null; else espera" class="container-fluid mt-4 mb-4">
     <div *ngFor="let hotel of hoteles" class="row" >
-
             <app-cardhotels style="margin-bottom: 2vh;" *ngIf="shareDataService.ciudad==null && hotel.pais==shareDataService.pais" [hotel]="hotel"></app-cardhotels>
             <app-cardhotels style="margin-bottom: 2vh;" *ngIf="shareDataService.ciudad!=null && hotel.poblacion==shareDataService.ciudad  && hotel.pais==shareDataService.pais" [hotel]="hotel"></app-cardhotels>
 
