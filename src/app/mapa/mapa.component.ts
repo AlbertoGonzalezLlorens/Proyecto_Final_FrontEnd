@@ -75,15 +75,25 @@ export class MapaComponent implements OnInit{
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
+
     this.mapa = new google.maps.Map(this.renderer.selectRootElement(this.divMap.nativeElement), opciones)
 
-    /*const markerPosition = new google.maps.Marker({
+
+    const markerPosition = new google.maps.Marker({
       position: this.mapa.getCenter(),
       title: "David",
     });
 
     markerPosition.setMap(this.mapa);
-    this.markers.push(markerPosition);*/
+    this.markers.push(markerPosition);
+    /*for (let i=0; i<this.shareDataService.hoteles.lenght; i++){
+      const markerPosition = new google.maps.Marker({
+        position: new google.maps.LatLng(this.shareDataService.hoteles[i].latitud,this.shareDataService.hoteles[i].longitud),
+        title: this.shareDataService.hoteles[i].nombre,
+      });
+      markerPosition.setMap(this.mapa);
+      this.markers.push(markerPosition);
+    }*/
   };
 
 

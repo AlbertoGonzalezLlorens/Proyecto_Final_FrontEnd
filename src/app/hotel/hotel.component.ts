@@ -11,10 +11,10 @@ import { ShareMapsDataService } from '../share-maps-data.service';
 })
 export class HotelComponent implements OnInit {
 
-  habitaciones: any
-  contactos: any
-  contacto: any
-  contacto1: any
+  habitaciones: any= null;
+  contactos: any = [];
+  contacto: any= null;
+  contacto1: any = [];
 
   constructor(private shareDataService: ShareMapsDataService, private http: HttpClient,public consultaService: ConsultasService){}
 
@@ -23,16 +23,19 @@ export class HotelComponent implements OnInit {
     this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/habitaciones").subscribe(result=>{
       this.habitaciones=result;
     },
-    error => {console.log("Problemitas");})
+    )
 
     this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/contactos").subscribe(patata=>{
       this.contactos=patata;
-    },
-    error => {console.log("Problemitas");})
+      this.contacto1=this.contactos[0];
+    },)
+
     //console.log("1 asdfasdf",this.habitaciones)
     //console.log("1 asdfasdf",this.habitaciones)
 
-    this.contacto1 = this.contactos
+    //console.log(this.contactos)
+    //this.contacto1 = this.habitaciones[0]
+    //console.log(this.contacto1)
     this.buscarContacto()
   }
 

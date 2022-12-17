@@ -11,6 +11,7 @@ export class ShareMapsDataService {
   public ciudad: any
   public pais: any
   public zoom: any = 2
+  public hoteles: any = null
 
   constructor() { }
   setNumero(numero: number){
