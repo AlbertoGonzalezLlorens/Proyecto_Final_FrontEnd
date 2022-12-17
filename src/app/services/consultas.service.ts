@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class ConsultasService {
 
-  public hotel: any
+  public hoteles: any
 
   constructor() { }
 
-  setHotel(hotel:any){
-    this.hotel=hotel
+  setHoteles(hoteles:any){
+    this.hoteles=hoteles
   }
 
 }

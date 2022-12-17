@@ -13,7 +13,7 @@
                 <h6 style="text-align: center;" *ngIf="hotel.categoria==5">⭐⭐⭐⭐⭐</h6>
                 <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;">{{hotel.descripcion}}</p>
 
-                        <a routerLink="/hotel" style="border:0px;background-color:rgb(253, 175, 175); margin-top:1vh;">More information</a>
+                        <a routerLink="/hotel" (click)="enviarInfo()" style="border:0px;background-color:rgb(253, 175, 175); margin-top:1vh;">More information</a>
 
             </div>
         </div>

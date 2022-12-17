@@ -8,14 +8,13 @@
         <div class="col-12 col-xs-12 col-mg-12 col-lg-10 col-xl-8 d-flex align-items-center justify-content-center pb-2 pt-2"
             style="z-index:100;">
             <div>
-                <h2 class="fw-bold" style="text-align: center;color:#f70577;">Hotel 1 Barcelona</h2>
-                <h5 style="text-align: center;">⭐⭐⭐⭐⭐</h5>
-                <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;">"Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum."</p>
+                <h2 class="fw-bold" style="text-align: center;color:#f70577;">{{consultaService.hoteles.nombre}}</h2>
+                <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==1">⭐</h5>
+                <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==2">⭐⭐</h5>
+                <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==3">⭐⭐⭐</h5>
+                <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==4">⭐⭐⭐⭐</h5>
+                <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==5">⭐⭐⭐⭐⭐</h5>
+                <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;">{{consultaService.hoteles.descripcion}}</p>
             </div>
         </div>
     </div>
@@ -30,14 +29,14 @@
             padding-top:2vh;">
             <h5 style="text-align: center;">Location</h5>
             <p style="text-align: center;">
-                <strong>Country</strong>:&nbsp;Spain&nbsp;&nbsp;&nbsp;&nbsp;<strong>Province</strong>:&nbsp;Catalonia
-                &nbsp;&nbsp;&nbsp;&nbsp;<strong>City</strong>:&nbsp;Barcelona
+                <strong>País</strong>:&nbsp;{{consultaService.hoteles.pais}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Provincia</strong>:&nbsp;{{consultaService.hoteles.provincia}}
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Ciudad</strong>:&nbsp;{{consultaService.hoteles.poblacion}}
             </p>
-            <p style="text-align: center;"><strong>Address</strong>:&nbsp;c/ Pepito,
-                6a&nbsp;&nbsp;&nbsp;&nbsp;<strong>CP</strong>:&nbsp;41002</p>
-            <h5 style="text-align: center;">Contact</h5>
+            <p style="text-align: center;"><strong>Dirección</strong>:&nbsp;{{consultaService.hoteles.direccion}},
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>CP</strong>:&nbsp;{{consultaService.hoteles.codigo_postal}}</p>
+            <h5 style="text-align: center;">Contacto</h5>
             <p style="text-align: center;">
-                <strong>Email</strong>:&nbsp;parapa@parapa.pa&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tlf</strong>:&nbsp;xxxxxxxxx
+                <strong>Email</strong>:&nbsp;{{contacto.email}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tlf</strong>:&nbsp;{{contacto.telefono_contacto}}
             </p>
         </div>
     </div>
