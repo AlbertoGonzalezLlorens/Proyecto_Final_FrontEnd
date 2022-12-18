@@ -27,7 +27,7 @@ export class RoleGuard implements CanActivate {
     const roles:string = patata.roles;
 
 
-    if(roles!=expectedRole){
+    if( !this.authService.isAuth() || roles!=expectedRole){
       console.log('Usuario no autorizado');
       return false;
     }

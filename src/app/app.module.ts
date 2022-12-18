@@ -19,11 +19,12 @@ import { VisorComponent } from './visor/visor.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { RecargaMapsDirective } from './directives/recarga-maps.directive';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 //Providers
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt'
+import { AuthInterceptor } from './services/auth.interceptor.service';
 
 @NgModule({
     declarations: [
@@ -41,8 +42,11 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt'
         RecargaMapsDirective,
     ],
     providers: [
+      //JWT
       {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
-      JwtHelperService
+      JwtHelperService,
+      //Token Interceptor
+      { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
     ],
     bootstrap: [AppComponent],
     imports: [

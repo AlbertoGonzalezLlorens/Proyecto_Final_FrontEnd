@@ -27,10 +27,7 @@ export class CartaloginComponent implements OnInit{
     }
 
     login(){
-      console.log("no mas", this.user.username)
-      console.log("no mas2", this.user.password)
       this.authService.login(this.user.username, this.user.password).subscribe( res => {
-        console.log(res);
         this.tokenStorage.saveToken(res.token);
         this.router.navigate(['home-page']);
       })

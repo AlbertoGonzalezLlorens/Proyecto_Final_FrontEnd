@@ -9,24 +9,26 @@
                       <div class="form-floating">
                         <input
                           type="text"
+                          [(ngModel)]="user.nombre" name="nombre"
                           id="floatingInput"
                           class="form-control"
                           placeholder="First name"
                           style="background: rgb(237, 200, 200);"
                         />
-                        <label for="floatingInput">First Name</label>
+                        <label for="floatingInput">Nombre</label>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-floating">
                         <input
                           type="text"
+                          [(ngModel)]="user.apellidos" name="apellidos"
                           id="form3Example2"
                           class="form-control"
                           placeholder="Last name"
                           style="background: rgb(237, 200, 200);"
                         />
-                        <label for="form3Example2">Last name</label>
+                        <label for="form3Example2">Apellidos</label>
                       </div>
                     </div>
                   </div>
@@ -36,18 +38,20 @@
                       <div class="form-floating">
                         <input
                           type="text"
+                          [(ngModel)]="user.username" name="username"
                           id="form3Example1"
                           class="form-control"
                           placeholder="User"
                           style="background: rgb(237, 200, 200);"
                         />
-                        <label for="form3Example1">User</label>
+                        <label for="form3Example1">Username</label>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-floating">
                         <input
                         type="password"
+                        [(ngModel)]="user.password" name="password"
                         id="form3Example4"
                         class="form-control"
                         placeholder="Password"
