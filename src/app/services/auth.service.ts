@@ -24,14 +24,14 @@ export class AuthService {
     }, httpOptions)
   }
 
-  register(username: string, nombre: string, apellidos: string, email:string, password: string,): Observable<any>{
+  /*register(username: string, nombre: string, apellidos: string, email:string, password: string,): Observable<any>{
     return this.http.post(AUTH_API+'api/hoteles', {
       username,
       nombre,
       apellidos,
       password
     }, httpOptions);
-  }
+  }*/
 
   isAuth():boolean{
     const token:any = this.tokenStorage.getToken();
