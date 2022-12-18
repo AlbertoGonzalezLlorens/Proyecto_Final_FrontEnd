@@ -12,9 +12,8 @@ import { ShareMapsDataService } from '../share-maps-data.service';
 export class HotelComponent implements OnInit {
 
   habitaciones: any= null;
-  contactos: any = [];
   contacto: any= null;
-  contacto1: any = [];
+
 
   constructor(private shareDataService: ShareMapsDataService, private http: HttpClient,public consultaService: ConsultasService){}
 
@@ -24,36 +23,12 @@ export class HotelComponent implements OnInit {
       this.habitaciones=result;
     },
     )
-    let s= "proyectofinalapi-production-7f34.up.railway.app/hoteles/contactos/(id_hotel"+this.consultaService.hoteles+")"
-    this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/contactos").subscribe(patata=>{
-      this.contactos=patata;
-      this.contacto1=this.contactos[0];
-    },)
-
-    //console.log("1 asdfasdf",this.habitaciones)
-    //console.log("1 asdfasdf",this.habitaciones)
-
-    //console.log(this.contactos)
-    //this.contacto1 = this.habitaciones[0]
-    //console.log(this.contacto1)
-    this.buscarContacto()
+    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/contactos/${this.consultaService.hoteles.id_hotel}`).subscribe(result=>{
+      this.contacto=result;
+      //console.log("contacto",this.contacto)
+    },
+    )
   }
-
-  buscarContacto() {
-
-
-
-    /*for (let i=0; i<this.contactos.length; i++) {
-      console.log("2 ",this.contactos[i].email)
-
-      if (this.contactos[i].id_hotel.id_hotel == this.consultaService.hoteles.id_hotel) {
-        this.contacto = this.contactos[i]
-
-      }
-    }*/
-  }
-
-
 }
 
 
