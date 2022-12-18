@@ -46,7 +46,7 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
       {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
       JwtHelperService,
       //Token Interceptor
-      { provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
+      /*{ provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}*/
     ],
     bootstrap: [AppComponent],
     imports: [
