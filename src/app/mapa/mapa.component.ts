@@ -75,7 +75,7 @@ export class MapaComponent implements OnInit{
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.mapa = new google.maps.Map(this.renderer.selectRootElement(this.divMap.nativeElement), opciones)
-
+    console.log("papito",this.shareDataService.hoteles[0].latitud, "     ", this.shareDataService.hoteles[0].longitud)
     for (let i=0; i<this.shareDataService.hoteles.length; i++){
       console.log("papito",this.shareDataService.hoteles[i].latitud, "     ", this.shareDataService.hoteles[i].longitud)
       const markerPosition = new google.maps.Marker({
