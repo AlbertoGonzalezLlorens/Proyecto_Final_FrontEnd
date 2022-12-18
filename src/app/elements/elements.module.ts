@@ -19,6 +19,7 @@ import { FormularioUsuarioFotoComponent } from './formulario-usuario-foto/formul
 import { FichaReservaComponent } from './ficha-reserva/ficha-reserva.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { AppRoutingModule } from './../app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -45,7 +46,8 @@ import { AppRoutingModule } from './../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

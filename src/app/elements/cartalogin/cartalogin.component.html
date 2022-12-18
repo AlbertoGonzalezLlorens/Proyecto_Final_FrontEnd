@@ -6,14 +6,14 @@
 
                 <!-- Email input -->
                 <div class="form-floating mb-4">
-                    <input type="user" id="form3Example3" class="form-control" placeholder="User"
+                    <input type="user" [(ngModel)]="user.username" name="username" id="form3Example3" class="form-control" placeholder="User"
                         style="background: rgb(237, 200, 200);width: 100%;" />
                         <label for="form3Example3">User</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-floating mb-4">
-                    <input type="password" id="form3Example4" class="form-control" placeholder="Password"
+                    <input type="password" [(ngModel)]="user.password" name="password" id="form3Example4" class="form-control" placeholder="Password"
                         style="background: rgb(237, 200, 200);" />
                         <label for="form3Example4">Password</label>
                 </div>
@@ -26,7 +26,7 @@
                     </label>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn" href="#" role="button" style="background-color:rgb(253, 175, 175);">Log in</a>
+                    <button class="btn" (click)="login()" role="button" style="background-color:rgb(253, 175, 175);">Log in</button>
                 </div>
             </form>
         </div>

@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -41,7 +42,8 @@ const routes: Routes = [
   },
   {
     path:'usuario',
-    component: UsuarioComponent
+    component: UsuarioComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'reservas',
