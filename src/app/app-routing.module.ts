@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RoleGuard } from './guards/role.guard';
 
 const routes: Routes = [
   {
@@ -47,7 +48,8 @@ const routes: Routes = [
   },
   {
     path:'reservas',
-    component: ReservasComponent
+    component: ReservasComponent,
+    canActivate: [RoleGuard]
   },
   { path: '', redirectTo:'/home-page', pathMatch:'full'},
   {
