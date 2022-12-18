@@ -11,18 +11,12 @@ import { Router } from '@angular/router';
 })
 export class CartaregisterComponent implements OnInit{
 
-  userName:string = '';
-  nombrE:string ='';
-  apellidoS:string ='';
-  emaiL:string = '';
-  passworD:string = '';
-
   body = {
-    username:this.userName,
-    nombre:this.nombrE,
-    apellidos:this.apellidoS,
-    email:this.emaiL,
-    password:this.passworD,
+    username:'',
+    nombre:'',
+    apellidos:'',
+    email:'',
+    password:'',
     rol:{"idRol": 2}
 
   }
@@ -40,6 +34,7 @@ export class CartaregisterComponent implements OnInit{
     }
     )
     this.router.navigate(['login']);
+
 
   }
 }
