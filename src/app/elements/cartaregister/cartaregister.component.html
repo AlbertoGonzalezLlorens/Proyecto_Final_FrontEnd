@@ -9,7 +9,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="nombrE" name="nombre"
+                          [(ngModel)]="body.nombre" name="nombrE"
                           id="floatingInput"
                           class="form-control"
                           placeholder="First name"
@@ -22,7 +22,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="apellidoS" name="apellidos"
+                          [(ngModel)]="body.apellidos" name="apellidoS"
                           id="form3Example2"
                           class="form-control"
                           placeholder="Last name"
@@ -38,7 +38,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="userName" name="username"
+                          [(ngModel)]="body.username" name="userName"
                           id="form3Example1"
                           class="form-control"
                           placeholder="User"
@@ -51,7 +51,7 @@
                       <div class="form-floating">
                         <input
                         type="password"
-                        [(ngModel)]="passworD" name="password"
+                        [(ngModel)]="body.password" name="passworD"
                         id="form3Example4"
                         class="form-control"
                         placeholder="Password"
@@ -64,7 +64,7 @@
                   </div>
                 <!-- Email input -->
                 <div class="form-floating mb-4">
-                  <input type="user" [(ngModel)]="emaiL" name="email" id="form3Example3" class="form-control" placeholder="Email" style="background: rgb(237, 200, 200);"/>
+                  <input type="user" [(ngModel)]="body.email" name="emaiL" id="form3Example3" class="form-control" placeholder="Email" style="background: rgb(237, 200, 200);"/>
                   <label for="form3Example3">Email</label>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
