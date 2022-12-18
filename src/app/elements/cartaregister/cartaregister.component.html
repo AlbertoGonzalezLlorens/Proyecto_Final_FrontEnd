@@ -9,7 +9,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="user.nombre" name="nombre"
+                          [(ngModel)]="nombrE" name="nombre"
                           id="floatingInput"
                           class="form-control"
                           placeholder="First name"
@@ -22,7 +22,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="user.apellidos" name="apellidos"
+                          [(ngModel)]="apellidoS" name="apellidos"
                           id="form3Example2"
                           class="form-control"
                           placeholder="Last name"
@@ -38,7 +38,7 @@
                       <div class="form-floating">
                         <input
                           type="text"
-                          [(ngModel)]="user.username" name="username"
+                          [(ngModel)]="userName" name="username"
                           id="form3Example1"
                           class="form-control"
                           placeholder="User"
@@ -51,7 +51,7 @@
                       <div class="form-floating">
                         <input
                         type="password"
-                        [(ngModel)]="user.password" name="password"
+                        [(ngModel)]="passworD" name="password"
                         id="form3Example4"
                         class="form-control"
                         placeholder="Password"
@@ -64,11 +64,11 @@
                   </div>
                 <!-- Email input -->
                 <div class="form-floating mb-4">
-                  <input type="user" id="form3Example3" class="form-control" placeholder="Email" style="background: rgb(237, 200, 200);"/>
+                  <input type="user" [(ngModel)]="emaiL" name="email" id="form3Example3" class="form-control" placeholder="Email" style="background: rgb(237, 200, 200);"/>
                   <label for="form3Example3">Email</label>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                  <a class="btn" href="#" role="button" style="background-color:rgb(252, 240, 165);">Register</a>
+                  <button class="btn" (click)="register()" role="button" style="background-color:rgb(252, 240, 165);">Registrarse</button>
                 </div>
               </form>
         </div>
