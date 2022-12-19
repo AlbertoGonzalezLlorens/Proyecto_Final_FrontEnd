@@ -54,7 +54,7 @@ export class UserService {
 
   putUsuario(body:any){
     console.log("Hola",body);
-    this.http.put(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/${this.id}`, body,httpOptions).subscribe(result=>{
+    this.http.put(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/${this.id}`,body).subscribe(result=>{
       console.log("usuario put result",result)
     },
     )
