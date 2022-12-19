@@ -49,7 +49,7 @@ const routes: Routes = [
   {
     path:'reservas',
     component: ReservasComponent,
-    canActivate: [RoleGuard]
+    canActivate: [AuthGuard] //[RoleGuard]
   },
   { path: '', redirectTo:'/home-page', pathMatch:'full'},
   {
