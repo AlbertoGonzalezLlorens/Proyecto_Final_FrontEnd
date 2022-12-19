@@ -11,6 +11,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RoleGuard } from './guards/role.guard';
+import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,11 @@ const routes: Routes = [
     path:'reservas',
     component: ReservasComponent,
     canActivate: [AuthGuard] //[RoleGuard]
+  },
+  {
+    path:'backoffice/hoteles',
+    component: HotelesComponent,
+    canActivate: [RoleGuard]
   },
   { path: '', redirectTo:'/home-page', pathMatch:'full'},
   {

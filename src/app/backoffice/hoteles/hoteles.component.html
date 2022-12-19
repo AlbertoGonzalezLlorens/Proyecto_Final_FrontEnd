@@ -1,1 +1,23 @@
-<p>hoteles works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-4">
+      <ul class="list-group">
+        <li *ngFor="let hotel of hoteles" class="list-group-item list-group-item-action">
+          <span class="badge badge-pill badge-success">{{hotel.id_hotel}}</span>
+          {{hotel.nombre}}
+        </li>
+      </ul>
+      <div>
+        <div class="card mt-6">
+          <div class="card-body">
+            <div class="card-title">
+              Inserta un nuevo hotel
+            </div>
+            <div class="form-group"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
