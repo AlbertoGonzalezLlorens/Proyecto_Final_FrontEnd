@@ -25,6 +25,9 @@ import { RouterModule } from '@angular/router';
 //Providers
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt'
 import { AuthInterceptor } from './services/auth.interceptor.service';
+import { UsuariosComponent } from './backoffice/usuarios/usuarios.component';
+import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
+import { HabitacionesComponent } from './backoffice/habitaciones/habitaciones.component';
 
 @NgModule({
     declarations: [
@@ -40,6 +43,9 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
         UsuarioComponent,
         ReservasComponent,
         RecargaMapsDirective,
+        UsuariosComponent,
+        HotelesComponent,
+        HabitacionesComponent,
     ],
     providers: [
       //JWT
