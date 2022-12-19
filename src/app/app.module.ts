@@ -24,10 +24,11 @@ import { RouterModule } from '@angular/router';
 
 //Providers
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt'
-import { AuthInterceptor } from './services/auth.interceptor.service';
 import { UsuariosComponent } from './backoffice/usuarios/usuarios.component';
 import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
 import { HabitacionesComponent } from './backoffice/habitaciones/habitaciones.component';
+import { AuthInterceptor,AuthInterceptorProvider } from './services/auth.interceptor.service';
+
 
 @NgModule({
     declarations: [
@@ -52,7 +53,7 @@ import { HabitacionesComponent } from './backoffice/habitaciones/habitaciones.co
       {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
       JwtHelperService,
       //Token Interceptor
-      /*{ provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}*/
+      AuthInterceptorProvider
     ],
     bootstrap: [AppComponent],
     imports: [

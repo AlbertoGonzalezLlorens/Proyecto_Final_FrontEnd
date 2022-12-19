@@ -7,7 +7,7 @@
                   type="text"
                   id="floatingInput"
                   class="form-control"
-                  placeholder="Alberto"
+                  placeholder="{{userService.nombre}}"
                   style="background: rgb(237, 200, 200);" disabled
                 />
               </div>
@@ -20,7 +20,7 @@
                   type="text"
                   id="floatingInput"
                   class="form-control"
-                  placeholder="González Llorens"
+                  placeholder="{{userService.apellidos}}"
                   style="background: rgb(237, 200, 200);" disabled
                 />
               </div>
@@ -34,6 +34,7 @@
                 id="floatingInput1"
                 class="form-control"
                 placeholder="Alberto"
+                [(ngModel)]="nombre"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput1">Nombre</label>
@@ -47,6 +48,7 @@
                 id="floatingInput2"
                 class="form-control"
                 placeholder="González Llorens"
+                [(ngModel)]="apellidos"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput2">Apellidos</label>
@@ -61,7 +63,7 @@
                   type="text"
                   id="floatingInput"
                   class="form-control"
-                  placeholder="Jibiri-jibir@jibiri.com"
+                  placeholder="{{userService.email}}"
                   style="background: rgb(237, 200, 200);" disabled
                 />
               </div>
@@ -74,7 +76,7 @@
                   type="text"
                   id="floatingInput"
                   class="form-control"
-                  placeholder="6XXXXXXXX"
+                  placeholder="{{userService.telefono}}"
                   style="background: rgb(237, 200, 200);" disabled
                 />
               </div>
@@ -88,6 +90,7 @@
                 id="floatingInput3"
                 class="form-control"
                 placeholder="Jibiri-jibir@jibiri.com"
+                [(ngModel)]="email"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput3">Email</label>
@@ -101,6 +104,7 @@
                 id="floatingInput"
                 class="form-control"
                 placeholder="6XXXXXXXX"
+                [(ngModel)]="telefono"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput">Telefono</label>
@@ -111,7 +115,7 @@
         <button type="button" class="btn btn-danger col-4 mx-auto" (click)="aparecer()">Modificar Datos</button>
     </div>
     <div class="row" *ngIf="appear==true">
-      <button type="button" class="btn btn-danger col-3 mx-auto" (click)="desvanecer()">Guardar</button>
+      <button type="button" class="btn btn-danger col-3 mx-auto" (click)="guardar()">Guardar</button>
       <button type="button" class="btn btn-danger col-3 mx-auto" (click)="desvanecer()">Cerrar</button>
   </div>
 </div>
