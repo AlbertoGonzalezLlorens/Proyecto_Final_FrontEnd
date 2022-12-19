@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TokenStorageService } from './token-storage.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
-
+import decode from 'jwt-decode';
 const AUTH_API = 'https://proyectofinalapi-production-7f34.up.railway.app/';
 
 const httpOptions = {
@@ -40,5 +40,22 @@ export class AuthService {
     }
     return true;
   }
+
+  isAdmin():boolean{
+    const expectedRole:string = 'ROLE_admin';
+    const token:any = this.tokenStorage.getToken();
+
+    const patata:any = decode(token);
+    const roles:string = patata.roles;
+
+
+    if( !this.isAuth() || roles!=expectedRole){
+      console.log('Usuario no autorizado');
+      return false;
+    }
+
+    return true;
+  }
+
 
 }

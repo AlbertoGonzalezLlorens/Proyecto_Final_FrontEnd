@@ -16,8 +16,13 @@ export class HeaderComponent implements OnInit{
   constructor(private token:TokenStorageService, private authservice:AuthService){}
 
   ngOnInit(): void {
-    if(this.authservice.isAuth()){
+    if (this.authservice.isAdmin()){
+      this.navbar=2;
+    }
+    else if(this.authservice.isAuth()){
       this.navbar=1;
+    } else {
+      this.navbar=0;
     }
   }
 
