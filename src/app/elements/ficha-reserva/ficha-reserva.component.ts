@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 /*import * as pdfMake from "pdfmake/build/pdfmake";
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
@@ -11,12 +13,16 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 })
 export class FichaReservaComponent implements OnInit{
 
-  constructor(){}
+  constructor(private authService:AuthService, public userService:UserService){}
 
   ngOnInit(): void {
+    this.authService.getUsername();
+    console.log("hola",this.authService.username);
+    this.userService.getReservas(this.authService.username);
+    console.log(this.userService.todasReservas);
   }
 
-  createPDF(){
+  /*createPDF(){
 
     const pdfDefinition:any = {
       content: [
@@ -26,9 +32,9 @@ export class FichaReservaComponent implements OnInit{
       ]
     }
 
-    /*const pdf = pdfMake.createPdf(pdfDefinition);
-    pdf.open();*/
+    const pdf = pdfMake.createPdf(pdfDefinition);
+    pdf.open();
 
 
-  }
+  }*/
 }

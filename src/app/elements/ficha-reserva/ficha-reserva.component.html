@@ -12,15 +12,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let reserva of userService.todasReservas">
         <th scope="row" style="text-align:center;">1</th>
-        <td style="text-align:center;">Mark</td>
-        <td style="text-align:center;">Otto</td>
-        <td style="text-align:center;">@mdo</td>
-        <td style="text-align:center;">@mdo</td>
-        <td style="text-align:center;">@mdo</td>
-        <td style="text-align:center;">@mdo</td>
-        <td style="text-align:center;">@mdo</td>
+        <td style="text-align:center;">{{reserva.id_habitacion.hotel.nombre}}</td>
+        <td style="text-align:center;">{{reserva.id_habitacion.tipo}}</td>
+        <td style="text-align:center;">{{reserva.id_habitacion.hotel.poblacion}}</td>
+        <td style="text-align:center;">{{reserva.id_habitacion.hotel.pais}}</td>
+        <td style="text-align:center;">{{reserva.id_factura.fecha_inicio}}</td>
+        <td style="text-align:center;">{{reserva.id_factura.fecha_fin}}</td>
+        <td style="text-align:center;">{{reserva.precio_final}}</td>
       </tr>
     </tbody>
   </table>

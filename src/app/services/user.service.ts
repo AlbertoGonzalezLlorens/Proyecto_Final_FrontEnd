@@ -44,6 +44,7 @@ export class UserService {
         "id_factura": 0
     }
   }
+  todasReservas:any;
 
   constructor(private http: HttpClient, private tokenStorage:TokenStorageService) { }
 
@@ -89,6 +90,13 @@ export class UserService {
   postReservas(){
     this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/reservas',this.body_reserva).subscribe(result=>{
       this.reservas=result;
+    },
+    )
+  }
+
+  getReservas(username:string){
+    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/reservas/usuario/${username}`).subscribe(result=>{
+      this.todasReservas=result;
     },
     )
   }
