@@ -46,12 +46,6 @@ import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive'
         RecargaMapsDirective,
         UsuariosComponent,
         HotelesComponent,
-<<<<<<< Updated upstream
-        HabitacionesComponent,
-        RecargaUsuarioDirective,
-=======
-
->>>>>>> Stashed changes
     ],
     providers: [
       //JWT
