@@ -47,9 +47,13 @@
               <li class="nav-item objeto">
                   <a class="nav-link objeto" routerLink="/reservas" >Mis reservas</a>
               </li>
-              <li class="nav-item objeto">
-                <a class="nav-link objeto" routerLink="#" >Backoffice</a>
-            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Backoffice</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/backoffice/hoteles">Hoteles</a></li>
+                  <li><a class="dropdown-item" routerLink="/backoffice/usuarios">Usuarios</a></li>
+                </ul>
+              </li>
               <li class="nav-item objeto">
                 <a class="nav-link objeto" (click)="desconexion()" routerLink="/login">Cerrar Sesion</a>
               </li>

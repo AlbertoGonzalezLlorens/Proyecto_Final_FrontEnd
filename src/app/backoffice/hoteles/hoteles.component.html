@@ -3,10 +3,108 @@
 <div class="row" style="margin-top: 3vh;">
   <div class="col-2"></div>
   <div class="col-md-8 user-container" style="text-align: center">
-    <h2 style="margin: auto">Hotel Details</h2>
-    <button class="btn btn-success" style="width: 100px" (click)="addHotel()">
+    <h2 style="margin: auto; margin-bottom: 2vh;">Lista de hoteles</h2>
+    <button class="btn btn-success" style="width: 100px; margin-bottom: 2vh;" (click)="addHotel()">
       Add Hotel
     </button>
+    <tr *ngIf="vamoaponerunhotel" >
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="nombre"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Nombre</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="categoria"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Categoria</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="precio_minimo"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Precio_minimo</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="pais"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">País</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="ciudad"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Ciudad</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="latitud"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Latitud</label>
+        </div>
+      </td>
+      <td >
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            id="floatingInput3"
+            class="form-control"
+            [(ngModel)]="longitud"
+            style="background: rgb(237, 200, 200);"
+          />
+          <label for="floatingInput3">Longitud</label>
+        </div>
+      </td>
+    </tr>
+    <div class="container" *ngIf="vamoaponerunhotel">
+    <div class="row justify-content-center">
+
+      <div class="col">
+        <button class="btn btn-success" (click)="guardar()">
+          Guardar
+        </button>
+      </div>
+
+    </div>
+
+  </div>
 
     <table class="table table-striped">
       <thead>

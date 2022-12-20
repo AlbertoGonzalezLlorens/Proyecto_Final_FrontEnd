@@ -46,6 +46,44 @@ export class UserService {
   }
   todasReservas:any;
 
+  body_hotel ={
+    nombre:"",
+    descripcion: "",
+    categoria: 0,
+    pais: "",
+    poblacion: "",
+    direccion: "",
+    codigo_postal: 0,
+    longitud: 0,
+    latitud: 0,
+    desayuno: false,
+    id_registrador: {
+      "id_usuario": 1
+    },
+    precioMin: 0
+  }
+  id_hotel: any;
+  hotelNuevo: any;
+  body_habitacion ={
+    num_habitacion: 111,
+        tipo: "Estándar",
+        descripcion: "Habitación sencilla sin sobrecoste",
+        precio: 0.0,
+        foto: null,
+        hotel: {
+            "id_hotel": 1
+            },
+    }
+  body_contacto ={
+    telefono_contacto:123123123,
+    email: "contacto@ejemplo.com",
+    id_hotel: {
+      "id_hotel": 1
+    },
+  }
+
+
+
   constructor(private http: HttpClient, private tokenStorage:TokenStorageService) { }
 
   obtenerInfoUsuario(){
@@ -71,15 +109,15 @@ export class UserService {
   }
 
   putUsuario(body:any){
-    console.log("Hola",body);
+    //console.log("Hola",body);
     this.http.put(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/solo/${this.id}`,body).subscribe(result=>{
-      console.log("usuario put result",result)
+      //console.log("usuario put result",result)
     },
     )
   }
 
   postFactura(body:any){
-    console.log("Hola",body);
+    //console.log("Hola",body);
     this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/facturas',body).subscribe(result=>{
       this.factura=result;
       this.body_reserva.id_factura.id_factura=this.factura.id_factura;
@@ -100,4 +138,38 @@ export class UserService {
     },
     )
   }
+  postHotel(){
+    this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles',this.body_hotel).subscribe(result=>{
+      this.hotelNuevo=result;
+      //console.log("aloha",this.body_hotel);
+      //console.log("aloha",this.body_contacto);
+      //console.log("aloha",this.body_habitacion);
+      this.body_contacto.id_hotel.id_hotel=this.hotelNuevo.id_hotel;
+      this.body_habitacion.hotel.id_hotel=this.hotelNuevo.id_hotel;
+      console.log("me cago en buda",this.body_contacto.id_hotel.id_hotel);
+      console.log("aun mas",this.body_habitacion.hotel.id_hotel)
+      console.log(this.hotelNuevo);
+      console.log("aloha",this.body_hotel);
+      console.log("aloha",this.body_contacto);
+      console.log("aloha",this.body_habitacion);
+    },
+    )
+  }
+  postContacto(){
+
+      console.log("aloha",this.body_contacto);
+
+    this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/contactos',this.body_contacto).subscribe(result=>{
+      console.log("result post contacto",result)
+    },
+    )
+  }
+  postHabitacion(){
+    console.log(this.body_habitacion)
+    this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/habitaciones',this.body_habitacion).subscribe(result=>{
+      console.log("result post habitacion",result)
+    },
+    )
+  }
+
 }
