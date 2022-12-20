@@ -1,1 +1,54 @@
-<p>usuarios works!</p>
+<app-header></app-header>
+
+<div class="row" style="margin-top: 3vh;">
+  <div class="col-2"></div>
+  <div class="col-md-8 user-container" style="text-align: center">
+    <h2 style="margin: auto; margin-bottom: 2vh;">Lista de hoteles</h2>
+
+
+    <div class="container" >
+    <div class="row justify-content-center">
+
+    </div>
+
+  </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="hidden">Id</th>
+          <th>Username</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Email</th>
+          <th>Teléfono móvil</th>
+          <th>Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <!-- {{hotel | json}} -->
+          <td class="hidden">{{usuario.id_usuario}}</td>
+          <td>{{usuario.username}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellidos}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.telefono}}</td>
+          <td>{{usuario.rol.nombre}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteUsuario(usuario.id_usuario)">
+              Delete
+            </button>
+            <!-- <button
+              class="btn btn-info"
+              (click)="editHotel(hotel)"
+              style="margin-left: 20px"
+            >
+              Edit
+            </button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
