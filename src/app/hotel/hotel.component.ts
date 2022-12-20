@@ -96,7 +96,7 @@ export class HotelComponent implements OnInit {
     this.userService.body_reserva.id_habitacion.id_habitacion=this.habitaciones[this.text-1].id_habitacion;
     console.log(this.userService.body_reserva);
     this.userService.postReservas();
-    this.router.navigate(['home-page']);
+    //this.router.navigate(['home-page']);
   }
 }
 

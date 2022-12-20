@@ -81,6 +81,6 @@ export class FormularioUsuarioComponent implements OnInit {
     this.consultasService.aumentarUno();
     this.appear=false;
     this.shared.setApperar(this.appear);
-    this.router.navigate(['home-page']);
+    //this.router.navigate(['home-page']);
   }
 }
