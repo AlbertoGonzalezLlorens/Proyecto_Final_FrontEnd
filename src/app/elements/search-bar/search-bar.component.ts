@@ -20,6 +20,7 @@ export class SearchBarComponent implements OnInit {
   distancia: string;
   formMapas: FormGroup;
   mapaComp: any;
+  autocomplete: any;
 
 
   constructor(private renderer: Renderer2, private shareDataService: ShareMapsDataService, public contadorService: ContadorService) {
@@ -73,24 +74,11 @@ export class SearchBarComponent implements OnInit {
 
 
 
+  buscador(){
 
+    console.log("auto 2",this.autocomplete)
 
-  private cargarAutocomplete() {
-
-    const autocomplete = new google.maps.places.Autocomplete(this.renderer.selectRootElement(this.inputPlaces.nativeElement), {
-
-      fields: ["address_components", "geometry"],
-      types: ["locality", "country", "sublocality", "administrative_area_level_1"],
-    })
-    console.log("auto 1",autocomplete)
-
-
-
-
-    google.maps.event.addListener(autocomplete, 'place_changed', () => {
-      console.log("auto 2",autocomplete)
-
-      const place: any = autocomplete.getPlace();
+      const place: any = this.autocomplete.getPlace();
 
       console.log("el place completo es:", place);
 
@@ -131,7 +119,22 @@ export class SearchBarComponent implements OnInit {
       this.shareDataService.patata()
       this.contadorService.setContador0()
 
+  }
+
+
+  private cargarAutocomplete() {
+
+    const autocomplete = new google.maps.places.Autocomplete(this.renderer.selectRootElement(this.inputPlaces.nativeElement), {
+
+      fields: ["address_components", "geometry"],
+      types: ["locality", "country", "sublocality", "administrative_area_level_1"],
     })
+    console.log("auto 1",autocomplete)
+
+
+     google.maps.event.addListener(autocomplete, 'place_changed', () => {
+      this.autocomplete=autocomplete;
+     })
   }
 
   llenarFormulario(place: any) {
