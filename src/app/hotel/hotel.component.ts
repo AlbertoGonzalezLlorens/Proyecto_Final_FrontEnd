@@ -22,7 +22,18 @@ export class HotelComponent implements OnInit {
   personas:number=0;
   diaEntrada:Date;
   diaSalida:Date;
-  dateDay = new Date();
+
+
+  dia:Date = new Date();
+  minDate:any = "2022-12-20";
+  todayDate:any;
+  date1:any = new Date();
+  currentYear:any = this.date1.getUTCFullYear();
+  currentMonth:any = this.date1.getUTCMonth()+1;
+  currentDay:any = this.date1.getUTCDate();
+  FinalMonth:any;
+  FinalDay:any;
+
 
   body = {
     fecha_inicio: new Date,
@@ -52,7 +63,19 @@ export class HotelComponent implements OnInit {
       this.boton_reserva=0;
     }
 
-    console.log(this.consultaService.hoteles)
+    if(this.currentMonth <10){
+      this.FinalMonth = "0" + this.currentMonth;
+    }else{
+      this.FinalMonth = this.currentMonth
+    }
+
+    if(this.currentDay <10 ){
+      this.FinalDay = "0" + this.currentDay;
+    }else{this.FinalDay = this.currentDay;}
+
+    this.todayDate = this.currentYear + "-" + this.FinalMonth + "-" + this.FinalDay;
+
+    this.minDate = this.todayDate;
   }
 
   reservar(){

@@ -68,13 +68,13 @@
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <div class="form-group">
                 <label for="firstday">First Day:</label>
-                <input type="date" id="firstday" [(ngModel)]="diaEntrada">
+                <input type="date" id="firstday" [(ngModel)]="diaEntrada" [min]="minDate">
             </div>
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <div class="form-group">
                 <label for="lastday">Last Day:</label>
-                <input type="date" id="lasttday" [(ngModel)]="diaSalida">
+                <input type="date" id="lasttday" [(ngModel)]="diaSalida" [min]="minDate">
             </div>
         </div>
     </div>
