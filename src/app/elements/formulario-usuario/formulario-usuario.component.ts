@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModifyuserService } from '../../services/modifyuser.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { UserService } from 'src/app/services/user.service';
-
+import { ConsultasService } from 'src/app/services/consultas.service';
 
 @Component({
   selector: 'app-formulario-usuario',
@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class FormularioUsuarioComponent implements OnInit {
 
-  constructor( public shared:ModifyuserService, public userService:UserService){ }
+  constructor( public shared:ModifyuserService, public userService:UserService, public consultasService:ConsultasService){ }
 
   appear:boolean = false;
   nombre:string='';
@@ -49,10 +49,11 @@ export class FormularioUsuarioComponent implements OnInit {
   guardar(){
     console.log(this.nombre)
     this.userService.obtenerInfoUsuario();
+    this.body.username=this.userService.username;
     if(this.nombre != ''){
       this.body.nombre=this.nombre;
     } else {
-      this.body.nombre=this.userService.nombre
+      this.body.nombre=this.userService.nombre;
     };
     if(this.apellidos != ''){
       this.body.apellidos=this.apellidos;
@@ -71,8 +72,12 @@ export class FormularioUsuarioComponent implements OnInit {
     }else{
       this.body.telefono=this.userService.telefono
     };
+    this.body.password=this.userService.password;
+    this.body.foto=this.userService.foto;
+    this.body.rol=this.userService.rol;
     console.log("2",this.body)
     this.userService.putUsuario(this.body);
+    this.consultasService.aumentarUno();
     this.appear=false;
     this.shared.setApperar(this.appear);
   }

@@ -27,6 +27,23 @@ export class UserService {
   password:any;
   foto:any;
   rol:any;
+  factura:any;
+  id_factura:any;
+  reservas:any;
+  body_reserva ={
+    precio_final:0,
+    id_usuario:{
+        "id_usuario": 0
+        }
+    ,
+    id_habitacion: {
+        "id_habitacion": 0
+        }
+    ,
+    id_factura: {
+        "id_factura": 0
+    }
+  }
 
   constructor(private http: HttpClient, private tokenStorage:TokenStorageService) { }
 
@@ -47,15 +64,31 @@ export class UserService {
       this.telefono=this.usuario[0].telefono;
       this.password=this.usuario[0].password;
       this.foto=this.usuario[0].foto;
-      console.log("1",this.id);
+      this.body_reserva.id_usuario.id_usuario=this.id;
     },
     )
   }
 
   putUsuario(body:any){
     console.log("Hola",body);
-    this.http.put(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/${this.id}`,body).subscribe(result=>{
+    this.http.put(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/solo/${this.id}`,body).subscribe(result=>{
       console.log("usuario put result",result)
+    },
+    )
+  }
+
+  postFactura(body:any){
+    console.log("Hola",body);
+    this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/facturas',body).subscribe(result=>{
+      this.factura=result;
+      this.body_reserva.id_factura.id_factura=this.factura.id_factura;
+    },
+    )
+  }
+
+  postReservas(){
+    this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/reservas',this.body_reserva).subscribe(result=>{
+      this.reservas=result;
     },
     )
   }

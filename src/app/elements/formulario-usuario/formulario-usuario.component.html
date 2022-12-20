@@ -33,8 +33,7 @@
                 type="text"
                 id="floatingInput1"
                 class="form-control"
-                placeholder="Alberto"
-                [(ngModel)]="nombre"
+                [(ngModel)]="userService.nombre"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput1">Nombre</label>
@@ -47,8 +46,7 @@
                 type="text"
                 id="floatingInput2"
                 class="form-control"
-                placeholder="González Llorens"
-                [(ngModel)]="apellidos"
+                [(ngModel)]="userService.apellidos"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput2">Apellidos</label>
@@ -89,8 +87,7 @@
                 type="text"
                 id="floatingInput3"
                 class="form-control"
-                placeholder="Jibiri-jibir@jibiri.com"
-                [(ngModel)]="email"
+                [(ngModel)]="userService.email"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput3">Email</label>
@@ -103,8 +100,7 @@
                 type="text"
                 id="floatingInput"
                 class="form-control"
-                placeholder="6XXXXXXXX"
-                [(ngModel)]="telefono"
+                [(ngModel)]="userService.telefono"
                 style="background: rgb(237, 200, 200);"
               />
               <label for="floatingInput">Telefono</label>

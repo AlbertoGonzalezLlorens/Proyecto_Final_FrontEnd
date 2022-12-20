@@ -28,6 +28,7 @@ import { UsuariosComponent } from './backoffice/usuarios/usuarios.component';
 import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
 import { HabitacionesComponent } from './backoffice/habitaciones/habitaciones.component';
 import { AuthInterceptor,AuthInterceptorProvider } from './services/auth.interceptor.service';
+import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { AuthInterceptor,AuthInterceptorProvider } from './services/auth.interce
         UsuariosComponent,
         HotelesComponent,
         HabitacionesComponent,
+        RecargaUsuarioDirective,
     ],
     providers: [
       //JWT
