@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class HotelesComponent implements OnInit{
 
   hoteles: any;
-  hotelSelected: any
   constructor( private http: HttpClient){}
 
   ngOnInit(): void {
@@ -21,6 +20,23 @@ export class HotelesComponent implements OnInit{
 
   }
 
+  addHotel(){
+
+
+  }
+
+  editHotel(hotel: any){
+    //Edita el hotel actual
+
+  }
+  deleteHotel(id_hotel: any){
+    this.http.delete(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${id_hotel}`).subscribe(result=>{
+
+
+    }
+    )
+
+  }
 
 
 }

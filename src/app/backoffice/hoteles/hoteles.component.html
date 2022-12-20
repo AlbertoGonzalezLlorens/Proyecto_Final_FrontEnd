@@ -1,23 +1,49 @@
 <app-header></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-4">
-      <ul class="list-group">
-        <li *ngFor="let hotel of hoteles" class="list-group-item list-group-item-action">
-          <span class="badge badge-pill badge-success">{{hotel.id_hotel}}</span>
-          {{hotel.nombre}}
-        </li>
-      </ul>
-      <div>
-        <div class="card mt-6">
-          <div class="card-body">
-            <div class="card-title">
-              Inserta un nuevo hotel
-            </div>
-            <div class="form-group"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+<div class="row" style="margin-top: 3vh;">
+  <div class="col-2"></div>
+  <div class="col-md-8 user-container" style="text-align: center">
+    <h2 style="margin: auto">Hotel Details</h2>
+    <button class="btn btn-success" style="width: 100px" (click)="addHotel()">
+      Add Hotel
+    </button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="hidden">Id</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio mínimo</th>
+          <th>Ciudad</th>
+          <th>País</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hotel of hoteles">
+          <td class="hidden">{{hotel.id_hotel}}</td>
+          <td>{{hotel.nombre}}</td>
+          <td>{{hotel.categoria}}</td>
+          <td>{{hotel.precio_min}}</td>
+          <td>{{hotel.poblacion}}</td>
+          <td>{{hotel.pais}}</td>
+          <td>{{hotel.longitud}}</td>
+          <td>{{hotel.latitud}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteHotel(hotel.id_hotel)">
+              Delete
+            </button>
+            <button
+              class="btn btn-info"
+              (click)="editHotel(hotel)"
+              style="margin-left: 20px"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
