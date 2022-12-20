@@ -141,17 +141,8 @@ export class UserService {
   postHotel(){
     this.http.post('https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles',this.body_hotel).subscribe(result=>{
       this.hotelNuevo=result;
-      //console.log("aloha",this.body_hotel);
-      //console.log("aloha",this.body_contacto);
-      //console.log("aloha",this.body_habitacion);
       this.body_contacto.id_hotel.id_hotel=this.hotelNuevo.id_hotel;
       this.body_habitacion.hotel.id_hotel=this.hotelNuevo.id_hotel;
-      console.log("me cago en buda",this.body_contacto.id_hotel.id_hotel);
-      console.log("aun mas",this.body_habitacion.hotel.id_hotel)
-      console.log(this.hotelNuevo);
-      console.log("aloha",this.body_hotel);
-      console.log("aloha",this.body_contacto);
-      console.log("aloha",this.body_habitacion);
     },
     )
   }
