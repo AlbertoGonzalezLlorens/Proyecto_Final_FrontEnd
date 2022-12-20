@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsultasService } from '../services/consultas.service';
 
 @Component({
   selector: 'app-usuario',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent {
+
+  constructor(public consultaService:ConsultasService){}
+
+  recargarFormulario:number  = this.consultaService.numero;
+
 
 }

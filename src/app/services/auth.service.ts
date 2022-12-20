@@ -15,6 +15,8 @@ const httpOptions = {
 })
 export class AuthService {
 
+  username:any;
+
   constructor(private http:HttpClient, private tokenStorage:TokenStorageService, private jwtHelper: JwtHelperService) { }
 
   login(username: string, password: string): Observable<any>{
@@ -57,5 +59,10 @@ export class AuthService {
     return true;
   }
 
+  getUsername(){
+    const token:any = this.tokenStorage.getToken();
+    const patata:any = decode(token);
+    this.username = patata.sub;
+  }
 
 }
