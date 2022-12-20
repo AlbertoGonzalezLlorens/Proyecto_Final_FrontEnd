@@ -7,6 +7,7 @@
     <button class="btn btn-success" style="width: 100px" (click)="addHotel()">
       Add Hotel
     </button>
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -22,10 +23,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let hotel of hoteles">
+          <!-- {{hotel | json}} -->
           <td class="hidden">{{hotel.id_hotel}}</td>
           <td>{{hotel.nombre}}</td>
-          <td>{{hotel.categoria}}</td>
-          <td>{{hotel.precio_min}}</td>
+          <td>{{hotel.categoria}}⭐</td>
+          <td>{{hotel.precioMin}} €</td>
           <td>{{hotel.poblacion}}</td>
           <td>{{hotel.pais}}</td>
           <td>{{hotel.longitud}}</td>
@@ -34,13 +36,13 @@
             <button class="btn btn-danger" (click)="deleteHotel(hotel.id_hotel)">
               Delete
             </button>
-            <button
+            <!-- <button
               class="btn btn-info"
               (click)="editHotel(hotel)"
               style="margin-left: 20px"
             >
               Edit
-            </button>
+            </button> -->
           </td>
         </tr>
       </tbody>
