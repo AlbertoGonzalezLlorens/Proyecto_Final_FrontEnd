@@ -3,6 +3,7 @@ import { ModifyuserService } from '../../services/modifyuser.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { UserService } from 'src/app/services/user.service';
 import { ConsultasService } from 'src/app/services/consultas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-usuario',
@@ -11,7 +12,7 @@ import { ConsultasService } from 'src/app/services/consultas.service';
 })
 export class FormularioUsuarioComponent implements OnInit {
 
-  constructor( public shared:ModifyuserService, public userService:UserService, public consultasService:ConsultasService){ }
+  constructor( public shared:ModifyuserService, public userService:UserService, public consultasService:ConsultasService, private router:Router){ }
 
   appear:boolean = false;
   nombre:string='';
@@ -33,7 +34,7 @@ export class FormularioUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.obtenerInfoUsuario();
-
+    console.log("Hola");
   }
 
   aparecer(){
@@ -80,5 +81,6 @@ export class FormularioUsuarioComponent implements OnInit {
     this.consultasService.aumentarUno();
     this.appear=false;
     this.shared.setApperar(this.appear);
+    this.router.navigate(['home-page']);
   }
 }
