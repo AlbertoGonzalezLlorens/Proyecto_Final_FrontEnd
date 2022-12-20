@@ -143,6 +143,8 @@ export class UserService {
       this.hotelNuevo=result;
       this.body_contacto.id_hotel.id_hotel=this.hotelNuevo.id_hotel;
       this.body_habitacion.hotel.id_hotel=this.hotelNuevo.id_hotel;
+      this.postContacto();
+      this.postHabitacion();
     },
     )
   }
