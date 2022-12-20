@@ -8,7 +8,7 @@
         <th scope="col" style="text-align:center;">País</th>
         <th scope="col" style="text-align:center;">Fecha Entrada</th>
         <th scope="col" style="text-align:center;">Fecha Salida</th>
-        <th scope="col" style="text-align:center;">Precio por noche</th>
+        <th scope="col" style="text-align:center;">Precio Total</th>
       </tr>
     </thead>
     <tbody>
@@ -18,9 +18,9 @@
         <td style="text-align:center;">{{reserva.id_habitacion.tipo}}</td>
         <td style="text-align:center;">{{reserva.id_habitacion.hotel.poblacion}}</td>
         <td style="text-align:center;">{{reserva.id_habitacion.hotel.pais}}</td>
-        <td style="text-align:center;">{{reserva.id_factura.fecha_inicio}}</td>
-        <td style="text-align:center;">{{reserva.id_factura.fecha_fin}}</td>
-        <td style="text-align:center;">{{reserva.precio_final}}</td>
+        <td style="text-align:center;">{{reserva.id_factura.fecha_inicio.slice(0,10)}}</td>
+        <td style="text-align:center;">{{reserva.id_factura.fecha_fin.slice(0,10)}}</td>
+        <td style="text-align:center;">{{reserva.precio_final}} €</td>
       </tr>
     </tbody>
   </table>

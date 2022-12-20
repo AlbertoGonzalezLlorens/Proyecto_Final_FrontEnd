@@ -20,9 +20,11 @@ export class HotelComponent implements OnInit {
   boton_reserva:number=0;
   precio:number=0;
   personas:number=0;
-  diaEntrada:Date;
-  diaSalida:Date;
-
+  diaEntrada:string;
+  diaSalida:string;
+  diaEntradaDate:Date;
+  diaSalidaDate:Date;
+  dias:any;
 
   dia:Date = new Date();
   minDate:any = "2022-12-20";
@@ -79,14 +81,18 @@ export class HotelComponent implements OnInit {
   }
 
   reservar(){
-    this.body.fecha_inicio=this.diaEntrada;
-    this.body.fecha_fin=this.diaSalida;
+    this.diaEntradaDate=new Date(this.diaEntrada);
+    this.diaSalidaDate=new Date(this.diaSalida);
+    const time:any = this.diaSalidaDate.getTime()-this.diaEntradaDate.getTime();
+    this.dias = time/(1000*3600*24);
+    this.body.fecha_inicio=this.diaEntradaDate;
+    this.body.fecha_fin=this.diaSalidaDate;
     this.body.numero_personas=this.personas;
     this.userService.postFactura(this.body);
     this.authservice.getUsername();
     console.log(this.authservice.username);
     this.userService.busquedaUsername(this.authservice.username);
-    this.userService.body_reserva.precio_final=this.consultaService.hoteles.precioMin+this.habitaciones[this.text-1].precio;
+    this.userService.body_reserva.precio_final=(this.dias-1)*(this.consultaService.hoteles.precioMin+this.habitaciones[this.text-1].precio);
     this.userService.body_reserva.id_habitacion.id_habitacion=this.habitaciones[this.text-1].id_habitacion;
     console.log(this.userService.body_reserva);
     this.userService.postReservas();
