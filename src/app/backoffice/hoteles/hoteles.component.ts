@@ -53,8 +53,8 @@ export class HotelesComponent implements OnInit{
     this.userService.body_hotel.longitud=this.longitud;
 
     this.userService.postHotel();
-    this.userService.postContacto();
-    this.userService.postHabitacion();
+    //this.userService.postContacto();
+    //this.userService.postHabitacion();
 
 
 
