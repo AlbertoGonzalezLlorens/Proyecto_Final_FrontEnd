@@ -152,6 +152,8 @@ export class UserService {
       console.log("aloha",this.body_hotel);
       console.log("aloha",this.body_contacto);
       console.log("aloha",this.body_habitacion);
+      this.postContacto();
+      this.postHabitacion();
     },
     )
   }

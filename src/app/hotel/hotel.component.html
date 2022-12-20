@@ -50,9 +50,9 @@
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <select class="form-control" [(ngModel)]="text" style="background: rgb(209, 129, 129);width:20vh;">
                 <option value=0>Pick a Room</option>
-                <option value=1>{{habitaciones[0].tipo}}</option>
-                <option value=2>{{habitaciones[1].tipo}}</option>
-                <option value=3>{{habitaciones[2].tipo}}</option>
+                <option *ngIf="habitaciones[0]!=null" value=1>{{habitaciones[0].tipo}}</option>
+                <option *ngIf="habitaciones[1]!=null" value=2>{{habitaciones[1].tipo}}</option>
+                <option *ngIf="habitaciones[2]!=null" value=3>{{habitaciones[2].tipo}}</option>
             </select>
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center" *ngIf="text!=0">
