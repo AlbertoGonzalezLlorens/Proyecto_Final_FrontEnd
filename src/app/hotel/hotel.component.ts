@@ -6,6 +6,7 @@ import { ShareMapsDataService } from '../share-maps-data.service';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 import { TokenStorageService } from '../services/token-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hotel',
@@ -30,13 +31,14 @@ export class HotelComponent implements OnInit {
   }
 
   constructor(private shareDataService: ShareMapsDataService, private http: HttpClient,public consultaService: ConsultasService,
-    private authservice:AuthService, private userService:UserService){}
+    private authservice:AuthService, private userService:UserService, private router:Router){}
 
   text: any = 0
   ngOnInit(): void {
     this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/contactos/${this.consultaService.hoteles.id_hotel}`).subscribe(result=>{
       this.contacto=result;
       console.log("contacto",this.contacto)
+      console.log(this.consultaService.hoteles.id_hotel);
     },
     )
     this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/habitaciones/hotel/${this.consultaService.hoteles.id_hotel}`).subscribe(result=>{
@@ -65,6 +67,7 @@ export class HotelComponent implements OnInit {
     this.userService.body_reserva.id_habitacion.id_habitacion=this.habitaciones[this.text-1].id_habitacion;
     console.log(this.userService.body_reserva);
     this.userService.postReservas();
+    this.router.navigate(['home-page']);
   }
 }
 
