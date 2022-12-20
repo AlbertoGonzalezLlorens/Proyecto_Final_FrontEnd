@@ -26,7 +26,6 @@ import { RouterModule } from '@angular/router';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt'
 import { UsuariosComponent } from './backoffice/usuarios/usuarios.component';
 import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
-import { HabitacionesComponent } from './backoffice/habitaciones/habitaciones.component';
 import { AuthInterceptor,AuthInterceptorProvider } from './services/auth.interceptor.service';
 import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive';
 
@@ -47,8 +46,12 @@ import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive'
         RecargaMapsDirective,
         UsuariosComponent,
         HotelesComponent,
+<<<<<<< Updated upstream
         HabitacionesComponent,
         RecargaUsuarioDirective,
+=======
+
+>>>>>>> Stashed changes
     ],
     providers: [
       //JWT
