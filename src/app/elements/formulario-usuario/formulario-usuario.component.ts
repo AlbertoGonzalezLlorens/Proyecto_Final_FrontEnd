@@ -82,5 +82,9 @@ export class FormularioUsuarioComponent implements OnInit {
     this.appear=false;
     this.shared.setApperar(this.appear);
     //this.router.navigate(['home-page']);
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 }

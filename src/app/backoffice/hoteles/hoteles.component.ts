@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/services/user.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from 'src/app/elements/popup/popup.component';
+
 
 @Component({
   selector: 'app-hoteles',
@@ -23,14 +26,16 @@ export class HotelesComponent implements OnInit{
 
 
 
-  constructor( private http: HttpClient, private userService: UserService){}
+
+
+  constructor( private http: HttpClient, private userService: UserService, private dialogRef: MatDialog){}
 
   ngOnInit(): void {
     this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles").subscribe(result=>{
       this.hoteles=result;
 
     }
-    )
+    );
 
   }
 
@@ -55,6 +60,9 @@ export class HotelesComponent implements OnInit{
     this.userService.postHotel();
     this.userService.postContacto();
     this.userService.postHabitacion();
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
 
 
 
@@ -64,14 +72,59 @@ export class HotelesComponent implements OnInit{
     //Edita el hotel actual
 
   }
+
+  // openDialog(id_hotel: any){
+  //   this.dialogRef.open(PopupComponent,{
+  //     data: {
+  //       id_hotel: id_hotel
+  //     }
+  //   });
+  // }
   deleteHotel(id_hotel: any){
-    this.http.delete(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${id_hotel}`).subscribe(result=>{
+
+    const Swal = require('sweetalert2');
+    Swal.fire({
+      title: 'Quieres eliminar el hotel?',
+      showDenyButton: true,
+      confirmButtonColor: "#FEBA0B",
+      confirmButtonText: 'Si',
+      customClass: {
+        actions: 'my-actions',
+        cancelButtonColor: '#C70039',
+        cancelButton: 'order-1 right-gap',
+        confirmButton: 'order-2',
+        denyButton: 'order-3',
+      }
+    }).then((result:any) => {
+      if (result.isConfirmed) {
+        // this.localStorage.logOut('user');
+        // this.router.navigate(['/home']);
+        Swal.fire({
+          title: 'Se eliminó el hotel',
+          confirmButtonColor: "#FEBA0B",
+          confirmButtonText: 'Aceptar'
+      });
+      this.http.delete(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${id_hotel}`).subscribe(result=>{
+      }
+      );
+      this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles").subscribe(result=>{
+        this.hoteles=result;
+      }
+      );
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
 
 
-    }
-    )
+      }
+      else{
+        Swal.fire({
+          title: 'No se eliminó el hotel',
+          confirmButtonColor: "#FEBA0B",
+          confirmButtonText: 'Aceptar'
+      });
+      }
+    })
 
-  }
 
-
-}
+}}

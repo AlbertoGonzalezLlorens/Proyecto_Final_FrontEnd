@@ -28,6 +28,9 @@ import { UsuariosComponent } from './backoffice/usuarios/usuarios.component';
 import { HotelesComponent } from './backoffice/hoteles/hoteles.component';
 import { AuthInterceptor,AuthInterceptorProvider } from './services/auth.interceptor.service';
 import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -61,7 +64,9 @@ import { RecargaUsuarioDirective } from './directives/recarga-usuario.directive'
         ElementsModule,
         FormsModule,
         HttpClientModule,
-        RouterModule
+        RouterModule,
+        NoopAnimationsModule,
+        MatDialogModule,
     ]
 })
 export class AppModule { }
