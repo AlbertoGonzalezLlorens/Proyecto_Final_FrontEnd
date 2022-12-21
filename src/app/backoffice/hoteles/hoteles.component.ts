@@ -19,8 +19,8 @@ export class HotelesComponent implements OnInit{
   precio_minimo: number = 0;
   pais: string = 'España';
   ciudad: string = 'Barcelona';
-  latitud: number = 41;
-  longitud: number = 3;
+  latitud: number = 3;
+  longitud: number = 41;
   id_hotel: number=500;
   hotelNuevo: any;
 
