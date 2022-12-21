@@ -15,7 +15,7 @@
                 <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==4">⭐⭐⭐⭐</h5>
                 <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==5">⭐⭐⭐⭐⭐</h5>
                 <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;">{{consultaService.hoteles.descripcion}}</p>
-                <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;">Precio base: {{consultaService.hoteles.precioMin}}</p>
+                <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;"><strong>Precio base</strong>: {{consultaService.hoteles.precioMin}}</p>
                 <!-- {{contactos[0] | json}} -->
             </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="col-12 col-xs-12 col-mg-12 col-lg-1 col-xl-1"></div>
         <div class="col-12 col-xs-12 col-mg-12 col-lg-8 col-xl-7 rounded" style="border:2px rgb(181, 37, 37) solid; background-color: rgba(255, 188, 188, 0.603);
             padding-top:2vh;">
-            <h5 style="text-align: center;">Location</h5>
+            <h5 style="text-align: center;">Ubicación</h5>
             <p style="text-align: center;">
                 <strong>País</strong>:&nbsp;{{consultaService.hoteles.pais}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Provincia</strong>:&nbsp;{{consultaService.hoteles.provincia}}
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>Ciudad</strong>:&nbsp;{{consultaService.hoteles.poblacion}}
@@ -46,10 +46,10 @@
 <div class="container rounded" style="margin-top:4vh;margin-bottom:4vh;border:2px rgb(181, 37, 37) solid;">
     <div class="row justify-content-center" style="background-color: rgba(255, 188, 188, 0.603);
     padding-bottom:2vh;padding-top:2vh;">
-        <h4 style="text-align: center; margin-bottom:5vh;"> Make your reservation</h4>
+        <h4 style="text-align: center; margin-bottom:5vh;"> Haz tu reserva</h4>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <select class="form-control" [(ngModel)]="text" style="background: rgb(209, 129, 129);width:20vh;">
-                <option value=0>Pick a Room</option>
+                <option value=0>Escoger Habitación</option>
                 <option *ngIf="habitaciones[0]!=null" value=1>{{habitaciones[0].tipo}}</option>
                 <option *ngIf="habitaciones[1]!=null" value=2>{{habitaciones[1].tipo}}</option>
                 <option *ngIf="habitaciones[2]!=null" value=3>{{habitaciones[2].tipo}}</option>
@@ -58,7 +58,7 @@
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center" *ngIf="text!=0">
             <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="personas"
                 style="background: rgb(209, 129, 129);width:20vh;">
-                <option value=0>N people</option>
+                <option value=0>N personas</option>
                 <option value=1>1</option>
                 <option value=2>2</option>
                 <option value=3>3</option>
@@ -67,13 +67,13 @@
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <div class="form-group">
-                <label for="firstday">First Day:</label>
+                <label for="firstday">Entrada:</label>
                 <input type="date" id="firstday" [(ngModel)]="diaEntrada" [min]="minDate">
             </div>
         </div>
         <div class="col-12 col-xs-12 col-ms-3 col-lg-3 col-xl-3 d-flex justify-content-center">
             <div class="form-group">
-                <label for="lastday">Last Day:</label>
+                <label for="lastday">Salida:</label>
                 <input type="date" id="lasttday" [(ngModel)]="diaSalida" [min]="minDate">
             </div>
         </div>
@@ -87,7 +87,7 @@
         </div>
         <div class="col-12 col-xs-12 col-mg-12 col-lg-8 col-xl-6 rounded" style="padding-right:5vh;">
 
-            <h5 style="text-align: center; padding-top:1vh;">Room information</h5>
+            <h5 style="text-align: center; padding-top:1vh;">Infromación de la habitción</h5>
             <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;margin-bottom:0vh">{{habitaciones[text-1].descripcion}}</p>
             <p style="text-align: center; padding-top:-20vhr;"><strong>Sobrecoste</strong>:&nbsp;&nbsp;{{habitaciones[text-1].precio}}</p>
             <div *ngIf="boton_reserva==0" class="row justify-content-center">
