@@ -33,7 +33,7 @@ export class NewformComponent implements OnInit{
     console.log("3",this.shareDataService.precio)
     console.log("4",this.shareDataService.desayuno)
     console.log("5",this.shareDataService.categoria)
-    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.ciudad}/${this.pais}/${this.shareDataService.precio}/${this.shareDataService.desayuno}/${this.shareDataService.categoria}`).subscribe(result=>{
+    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/filtro/${this.ciudad}/${this.pais}/${this.shareDataService.precio}/${this.shareDataService.desayuno}/${this.shareDataService.categoria}`).subscribe(result=>{
       this.hoteles=result;
       this.shareDataService.setHoteles(this.hoteles)
     }

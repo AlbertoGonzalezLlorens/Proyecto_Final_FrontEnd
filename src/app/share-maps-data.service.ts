@@ -12,6 +12,7 @@ export class ShareMapsDataService {
   public pais: any
   public zoom: any = 2
   public hoteles: any = []
+  public hoteles2: any = []
   public bannerclick: boolean;
   public ciudadBanner: any;
   public categoria:number;
@@ -45,6 +46,9 @@ export class ShareMapsDataService {
   }
   setHoteles(hoteles: any){
     this.hoteles=hoteles
+  }
+  setHoteles2(hoteles2: any){
+    this.hoteles2=hoteles2
   }
   patata(){
     this.numero +=1;
