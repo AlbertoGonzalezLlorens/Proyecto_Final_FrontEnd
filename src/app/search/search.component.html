@@ -5,19 +5,19 @@
         <div class="col-12" style="height:50vh;padding-bottom:2vh;"><app-mapa *appRecargaMaps="shareDataService.numero"></app-mapa></div>
     </div>
 </div>
-<!-- <div *ngIf="hoteles!=null; else espera" class="container-fluid mt-4 mb-4">
+<div *ngIf="hoteles!=null; else espera" class="container-fluid mt-4 mb-4">
     <div *ngFor="let hotel of hoteles" class="row" >
             <app-cardhotels style="margin-bottom: 2vh;" *ngIf="shareDataService.ciudad==null && hotel.pais==shareDataService.pais" [hotel]="hotel"></app-cardhotels>
-            <app-cardhotels style="margin-bottom: 2vh;" *ngIf="shareDataService.ciudad!=null && hotel.poblacion==shareDataService.ciudad  && hotel.pais==shareDataService.pais" [hotel]="hotel"></app-cardhotels> -->
+            <app-cardhotels style="margin-bottom: 2vh;" *ngIf="shareDataService.ciudad!=null && hotel.poblacion==shareDataService.ciudad  && hotel.pais==shareDataService.pais" [hotel]="hotel"></app-cardhotels>
 
 
-      <!--<div *ngIf="hotel.poblacion==shareDataService.ciudad">
+      <!-- <div *ngIf="hotel.poblacion==shareDataService.ciudad">
           <app-cardhotels></app-cardhotels>
         </div>-->
-    <!-- </div>
+    </div>
     <div *ngIf="contadorService.contador==0" >
       No se ha encontrado ningún resultado
     </div>
 </div>
-<ng-template #espera>Buscando tus hoteles...</ng-template> -->
-<app-newform *appRecargaMaps="shareDataService.numero"></app-newform>
+<ng-template #espera>Buscando tus hoteles...</ng-template>
+<!-- <app-newform *appRecargaMaps="shareDataService.numero"></app-newform> -->

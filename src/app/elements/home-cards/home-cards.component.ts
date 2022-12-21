@@ -27,56 +27,56 @@ export class HomeCardsComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.numeroR1=this.getRandomArbitrary();
-    do{
-      this.numeroR2=this.getRandomArbitrary();
-      if(this.numeroR1!=this.numeroR2){
-        this.outwhile=false;
-      }
-    }
-    while(this.outwhile);
-    this.outwhile=true;
-    do{
-      this.numeroR3=this.getRandomArbitrary();
-      if(this.numeroR1!=this.numeroR3 && this.numeroR2!=this.numeroR3){
-        this.outwhile=false;
-      }
-    }
-    while(this.outwhile);
-    this.outwhile=true;
-    do{
-      this.numeroR4=this.getRandomArbitrary();
-      if(this.numeroR1!=this.numeroR4 && this.numeroR2!=this.numeroR4 && this.numeroR3!=this.numeroR4){
-        this.outwhile=false;
-      }
-    }
-    while(this.outwhile);
-    this.outwhile=true;
+    // this.numeroR1=this.getRandomArbitrary();
+    // do{
+    //   this.numeroR2=this.getRandomArbitrary();
+    //   if(this.numeroR1!=this.numeroR2){
+    //     this.outwhile=false;
+    //   }
+    // }
+    // while(this.outwhile);
+    // this.outwhile=true;
+    // do{
+    //   this.numeroR3=this.getRandomArbitrary();
+    //   if(this.numeroR1!=this.numeroR3 && this.numeroR2!=this.numeroR3){
+    //     this.outwhile=false;
+    //   }
+    // }
+    // while(this.outwhile);
+    // this.outwhile=true;
+    // do{
+    //   this.numeroR4=this.getRandomArbitrary();
+    //   if(this.numeroR1!=this.numeroR4 && this.numeroR2!=this.numeroR4 && this.numeroR3!=this.numeroR4){
+    //     this.outwhile=false;
+    //   }
+    // }
+    // while(this.outwhile);
+    // this.outwhile=true;
 
-    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR1}`).subscribe(result=>{
-      this.hotel1=result
-      this.url1 = "../../../assets/img/"+this.hotel1.nombre+".jpg";
-    },
-    )
-    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR2}`).subscribe(result=>{
-      this.hotel2=result
-      this.url2 = "../../../assets/img/"+this.hotel2.nombre+".jpg";
-    },
-    )
-    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR3}`).subscribe(result=>{
-      this.hotel3=result
-      this.url3 = "../../../assets/img/"+this.hotel3.nombre+".jpg";
-    },
-    )
-    this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR4}`).subscribe(result=>{
-      this.hotel4=result
-      this.url4 = "../../../assets/img/"+this.hotel4.nombre+".jpg";
-    },
-    )
-    console.log(this.numeroR4);
-    console.log(this.hotel1);
-    console.log(this.hotel1);
-    console.log(this.hotel1);
+    // this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR1}`).subscribe(result=>{
+    //   this.hotel1=result
+    //   this.url1 = "../../../assets/img/"+this.hotel1.nombre+".jpg";
+    // },
+    // )
+    // this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR2}`).subscribe(result=>{
+    //   this.hotel2=result
+    //   this.url2 = "../../../assets/img/"+this.hotel2.nombre+".jpg";
+    // },
+    // )
+    // this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR3}`).subscribe(result=>{
+    //   this.hotel3=result
+    //   this.url3 = "../../../assets/img/"+this.hotel3.nombre+".jpg";
+    // },
+    // )
+    // this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/${this.numeroR4}`).subscribe(result=>{
+    //   this.hotel4=result
+    //   this.url4 = "../../../assets/img/"+this.hotel4.nombre+".jpg";
+    // },
+    // )
+    // console.log(this.numeroR4);
+    // console.log(this.hotel1);
+    // console.log(this.hotel1);
+    // console.log(this.hotel1);
   }
 
   getRandomArbitrary() {
