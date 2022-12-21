@@ -1,27 +1,32 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import 'https://fonts.googleapis.com/css?family=Alegreya Sans SC';
 
 
 
 div[class*=box] {
-  height: 15.33%;
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
-
+.span {
+  /* font-family: Alegreya Sans SC; */
+  font-family: Cursive;
+}
 
 
 .btn {
   line-height: 9vh;
-  height: 10vh;
+  margin: 5vh;
   text-align: center;
+  padding-left: 2vh;
+  padding-right: 2vh;
 
-  width: 25vh;
+
   cursor: pointer;
 }
 
