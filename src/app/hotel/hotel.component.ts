@@ -95,7 +95,9 @@ export class HotelComponent implements OnInit {
     this.authservice.getUsername();
     console.log(this.authservice.username);
     this.userService.busquedaUsername(this.authservice.username);
-    this.userService.body_reserva.precio_final=(this.dias)*(this.consultaService.hoteles.precioMin+this.habitaciones[this.text-1].precio);
+    let numb: any  = (this.dias)*(this.consultaService.hoteles.precioMin+this.habitaciones[this.text-1].precio);
+
+    this.userService.body_reserva.precio_final=numb.toFixed(2);
     this.userService.body_reserva.id_habitacion.id_habitacion=this.habitaciones[this.text-1].id_habitacion;
     console.log(this.userService.body_reserva);
     this.userService.postReservas();

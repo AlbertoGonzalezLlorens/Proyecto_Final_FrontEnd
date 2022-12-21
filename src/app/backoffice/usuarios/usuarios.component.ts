@@ -41,11 +41,52 @@ export class UsuariosComponent {
 
   }
   deleteUsuario(id_usuario: any){
-    this.http.delete(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/${id_usuario}`).subscribe(result=>{
 
-
+    const Swal = require('sweetalert2');
+    Swal.fire({
+      title: 'Quieres eliminar el usuario?',
+      showDenyButton: true,
+      confirmButtonColor: "#FEBA0B",
+      confirmButtonText: 'Sí',
+      customClass: {
+        actions: 'my-actions',
+        cancelButtonColor: '#C70039',
+        cancelButton: 'order-1 right-gap',
+        confirmButton: 'order-2',
+        denyButton: 'order-3',
+      }
+    }).then((result:any) => {
+      if (result.isConfirmed) {
+        // this.localStorage.logOut('user');
+        // this.router.navigate(['/home']);
+        Swal.fire({
+          title: 'Se eliminó el usuario',
+          confirmButtonColor: "#FEBA0B",
+          confirmButtonText: 'Aceptar'
+      });
+      this.http.delete(`https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/${id_usuario}`).subscribe(result=>{
     }
     )
+      this.http.get("https://proyectofinalapi-production-7f34.up.railway.app/api/usuarios/").subscribe(result=>{
+        this.usuarios=result;
+      }
+      );
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+
+
+      }
+      else{
+        Swal.fire({
+          title: 'No se eliminó el hotel',
+          confirmButtonColor: "#FEBA0B",
+          confirmButtonText: 'Aceptar'
+      });
+      }
+    })
+
+
 
   }
 

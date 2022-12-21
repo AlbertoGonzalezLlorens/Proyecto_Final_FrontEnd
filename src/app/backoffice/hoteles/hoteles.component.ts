@@ -62,7 +62,7 @@ export class HotelesComponent implements OnInit{
     this.userService.postHabitacion();
     setTimeout(() => {
       window.location.reload();
-    }, 500);
+    }, 2000);
 
 
 
@@ -87,7 +87,7 @@ export class HotelesComponent implements OnInit{
       title: 'Quieres eliminar el hotel?',
       showDenyButton: true,
       confirmButtonColor: "#FEBA0B",
-      confirmButtonText: 'Si',
+      confirmButtonText: 'Sí',
       customClass: {
         actions: 'my-actions',
         cancelButtonColor: '#C70039',
@@ -113,7 +113,7 @@ export class HotelesComponent implements OnInit{
       );
       setTimeout(() => {
         window.location.reload();
-      }, 500);
+      }, 2000);
 
 
       }
