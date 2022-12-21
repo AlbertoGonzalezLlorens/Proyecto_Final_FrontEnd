@@ -27,7 +27,7 @@ export class HotelComponent implements OnInit {
   dias:any;
 
   dia:Date = new Date();
-  minDate:any = "2022-12-20";
+  minDate:any;
   todayDate:any;
   date1:any = new Date();
   currentYear:any = this.date1.getUTCFullYear();
@@ -35,6 +35,8 @@ export class HotelComponent implements OnInit {
   currentDay:any = this.date1.getUTCDate();
   FinalMonth:any;
   FinalDay:any;
+  url:any;
+  urlhabitacion:any;
 
 
   body = {
@@ -48,6 +50,7 @@ export class HotelComponent implements OnInit {
 
   text: any = 0
   ngOnInit(): void {
+    this.url = "../../../assets/img/"+this.consultaService.hoteles.nombre+".jpg";
     this.http.get(`https://proyectofinalapi-production-7f34.up.railway.app/api/hoteles/contactos/${this.consultaService.hoteles.id_hotel}`).subscribe(result=>{
       this.contacto=result;
       console.log("contacto",this.contacto)

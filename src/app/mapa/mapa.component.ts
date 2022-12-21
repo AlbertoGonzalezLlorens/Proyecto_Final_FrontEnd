@@ -31,6 +31,10 @@ export class MapaComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    if(this.shareDataService.bannerclick){
+      this.cargarMapa();
+      this.shareDataService.bannerclick=false;
+    }
   }
 
   ngAfterViewInit(): void {

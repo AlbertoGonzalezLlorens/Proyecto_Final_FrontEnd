@@ -12,6 +12,8 @@ export class ShareMapsDataService {
   public pais: any
   public zoom: any = 2
   public hoteles: any = []
+  public bannerclick: boolean;
+  public ciudadBanner: any;
 
   constructor() { }
   setNumero(numero: number){

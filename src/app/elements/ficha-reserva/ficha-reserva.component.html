@@ -2,7 +2,6 @@
   <table class="table table-striped" style="margin-top:5vh;">
     <thead>
       <tr>
-        <th scope="col" style="text-align:center;">#</th>
         <th scope="col" style="text-align:center;">Hotel</th>
         <th scope="col" style="text-align:center;">Tipo de habitación</th>
         <th scope="col" style="text-align:center;">Ciudad</th>
@@ -14,7 +13,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let reserva of userService.todasReservas">
-        <th scope="row" style="text-align:center;">1</th>
         <td style="text-align:center;">{{reserva.id_habitacion.hotel.nombre}}</td>
         <td style="text-align:center;">{{reserva.id_habitacion.tipo}}</td>
         <td style="text-align:center;">{{reserva.id_habitacion.hotel.poblacion}}</td>

@@ -13,9 +13,13 @@ export class CardhotelsComponent implements OnInit{
 
   @Input() hotel: any;
 
+  url:any;
+
   constructor(public shareDataService: ShareMapsDataService,public contadorService: ContadorService, public consultasService: ConsultasService){}
   ngOnInit(): void {
-    this.contadorService.contador++
+    this.contadorService.contador++;
+    this.url = "../../../assets/img/"+this.hotel.nombre+".jpg";
+    console.log(this.url);
   }
 
   enviarInfo(){
