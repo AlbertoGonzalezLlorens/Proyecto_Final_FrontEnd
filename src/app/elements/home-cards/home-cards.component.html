@@ -4,66 +4,86 @@
   <div class="row " #animado>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3 cartas d-flex justify-content-center" >
       <div class="card"  style="width: 18rem">
-        <div class="card"  style="width: 18rem">
+        <section style="height:20vh;">
           <img
-            class="card-img-top"
-            src="../../assets/img/hotel_in_barcelona.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Barcelona's Hotel</h5>
-            <p class="card-text">Nice hotel in Barcelona.</p>
-            <a routerLink="/hotel" class="btn btn-danger">Go somewhere</a>
-          </div>
+          class="card-img-top"
+          src={{url1}}
+          alt="Card image cap"
+          style="height:100%;width:100%"
+        />
+        </section>
+        <div class="card-body">
+          <h5 class="card-title">{{hotel1.nombre}} - {{hotel1.poblacion}}</h5>
+          <p class="card-text" *ngIf="hotel1.categoria==1">⭐</p>
+          <p class="card-text" *ngIf="hotel1.categoria==2">⭐⭐</p>
+          <p class="card-text" *ngIf="hotel1.categoria==3">⭐⭐⭐</p>
+          <p class="card-text" *ngIf="hotel1.categoria==4">⭐⭐⭐⭐</p>
+          <p class="card-text" *ngIf="hotel1.categoria==5">⭐⭐⭐⭐⭐</p>
+          <a routerLink="/hotel" class="btn btn-danger">Ir al Hotel</a>
         </div>
       </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3 cartas d-flex justify-content-center">
       <div class="card" style="width: 18rem">
-        <div class="card" style="width: 18rem">
+        <section style="height:20vh;">
           <img
-            class="card-img-top"
-            src="../../assets/img/hotel_in_california.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">California's Hotel</h5>
-            <p class="card-text">Nice hotel in California.</p>
-            <a routerLink="/hotel" class="btn btn-danger">Go somewhere</a>
-          </div>
+          class="card-img-top"
+          src={{url2}}
+          alt="Card image cap"
+          style="height:100%;width:100%"
+        />
+        </section>
+        <div class="card-body">
+          <h5 class="card-title">{{hotel2.nombre}} - {{hotel2.poblacion}}</h5>
+          <p class="card-text" *ngIf="hotel2.categoria==1">⭐</p>
+          <p class="card-text" *ngIf="hotel2.categoria==2">⭐⭐</p>
+          <p class="card-text" *ngIf="hotel2.categoria==3">⭐⭐⭐</p>
+          <p class="card-text" *ngIf="hotel2.categoria==4">⭐⭐⭐⭐</p>
+          <p class="card-text" *ngIf="hotel2.categoria==5">⭐⭐⭐⭐⭐</p>
+          <a routerLink="/hotel" class="btn btn-danger">Ir al Hotel</a>
         </div>
       </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3 cartas d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
         <div class="card" style="width: 18rem">
-          <img
+          <section style="height:20vh;">
+            <img
             class="card-img-top"
-            src="../../assets/img/hotel_in_hawaii.png"
+            src={{url3}}
             alt="Card image cap"
+            style="height:100%;width:100%"
           />
+          </section>
           <div class="card-body">
-            <h5 class="card-title">Hawaii's Hotel</h5>
-            <p class="card-text">Nice hotel in Hawaii.</p>
-            <a routerLink="/hotel" class="btn btn-danger">Go somewhere</a>
+            <h5 class="card-title">{{hotel3.nombre}} - {{hotel3.poblacion}}</h5>
+            <p class="card-text" *ngIf="hotel3.categoria==1">⭐</p>
+            <p class="card-text" *ngIf="hotel3.categoria==2">⭐⭐</p>
+            <p class="card-text" *ngIf="hotel3.categoria==3">⭐⭐⭐</p>
+            <p class="card-text" *ngIf="hotel3.categoria==4">⭐⭐⭐⭐</p>
+            <p class="card-text" *ngIf="hotel3.categoria==5">⭐⭐⭐⭐⭐</p>
+            <a routerLink="/hotel" class="btn btn-danger">Ir al Hotel</a>
           </div>
         </div>
-      </div>
     </div>
     <div class="col-12 col-sm-12 col-md-6 col-lg-3 cartas d-flex justify-content-center">
-      <div class="card" style="width: 18rem">
         <div class="card" style="width: 18rem">
-          <img
+          <section style="height:20vh;">
+            <img
             class="card-img-top"
-            src="../../assets/img/hotel_in_paris.png"
+            src={{url4}}
             alt="Card image cap"
+            style="height:100%;width:100%"
           />
+          </section>
           <div class="card-body">
-            <h5 class="card-title">Paris' Hotel</h5>
-            <p class="card-text">Nice hotel in Paris.</p>
-            <a routerLink="/hotel" class="btn btn-danger">Go somewhere</a>
+            <h5 class="card-title">{{hotel4.nombre}} - {{hotel4.poblacion}}</h5>
+            <p class="card-text" *ngIf="hotel4.categoria==1">⭐</p>
+            <p class="card-text" *ngIf="hotel4.categoria==2">⭐⭐</p>
+            <p class="card-text" *ngIf="hotel4.categoria==3">⭐⭐⭐</p>
+            <p class="card-text" *ngIf="hotel4.categoria==4">⭐⭐⭐⭐</p>
+            <p class="card-text" *ngIf="hotel4.categoria==5">⭐⭐⭐⭐⭐</p>
+            <a routerLink="/hotel" class="btn btn-danger">Ir al Hotel</a>
           </div>
-        </div>
       </div>
     </div>
   </div>
