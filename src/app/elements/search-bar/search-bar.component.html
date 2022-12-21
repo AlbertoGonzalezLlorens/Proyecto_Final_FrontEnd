@@ -11,7 +11,7 @@
                                 <div class="input-group">
 
                                   <input type="text" #inputPlaces id="inputPlaces" class="form-control" placeholder="Search" aria-label="Search"
-                                  aria-describedby="basic-addon1">
+                                  aria-describedby="basic-addon1" [(ngModel)]="busqueda">
 
                                   <a class="btn" role="button" (click)="buscador()" style="border:0px;background-color:rgb(253, 175, 175);">Search</a>
                                   <div class="mapa" #divMap></div>
@@ -24,38 +24,30 @@
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Stars</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option></option>
-                                <option>⭐</option>
-                                <option>⭐⭐</option>
-                                <option>⭐⭐⭐</option>
-                                <option>⭐⭐⭐⭐</option>
-                                <option>⭐⭐⭐⭐⭐</option>
+                            <select class="form-control" [(ngModel)]="categoria" name="categoria" id="exampleFormControlSelect1">
+                                <option value=0></option>
+                                <option value=1>⭐</option>
+                                <option value=2>⭐⭐</option>
+                                <option value=3>⭐⭐⭐</option>
+                                <option value=4>⭐⭐⭐⭐</option>
+                                <option value=5>⭐⭐⭐⭐⭐</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Breakfast</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option></option>
-                                <option>YES</option>
-                                <option>NO</option>
+                            <select class="form-control" [(ngModel)]="desayuno" id="exampleFormControlSelect1">
+                                <option value="a"></option>
+                                <option value="no">YES</option>
+                                <option value="yes">NO</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Price Range</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option></option>
-                                <option>
-                                    < 25€ </option>
-                                <option>25€ - 50€</option>
-                                <option>50€ - 75€</option>
-                                <option>75€ - 100€</option>
-                                <option> > 100€</option>
-                            </select>
+                            <input class="form-control" [(ngModel)]="precio">
                         </div>
                     </div>
                 </div>

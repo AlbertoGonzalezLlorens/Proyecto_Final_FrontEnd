@@ -14,6 +14,9 @@ export class ShareMapsDataService {
   public hoteles: any = []
   public bannerclick: boolean;
   public ciudadBanner: any;
+  public categoria:number;
+  public precio:number;
+  public desayuno:string;
 
   constructor() { }
   setNumero(numero: number){
@@ -45,6 +48,15 @@ export class ShareMapsDataService {
   }
   patata(){
     this.numero +=1;
+  }
+  setCategoria(categoria: any){
+    this.categoria=categoria
+  }
+  setPrecio(precio: any){
+    this.precio=precio
+  }
+  setDesayuno(desayuno: any){
+    this.desayuno=desayuno
   }
 
 

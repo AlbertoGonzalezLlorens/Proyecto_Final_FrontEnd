@@ -21,6 +21,10 @@ export class SearchBarComponent implements OnInit {
   formMapas: FormGroup;
   mapaComp: any;
   autocomplete: any;
+  categoria:number=0;
+  desayuno:string="a";
+  precio:number=0;
+  busqueda:any;
 
 
   constructor(private renderer: Renderer2, private shareDataService: ShareMapsDataService, public contadorService: ContadorService) {
@@ -75,8 +79,12 @@ export class SearchBarComponent implements OnInit {
 
 
   buscador(){
-
+    console.log("hola",)
     console.log("auto 2",this.autocomplete)
+    console.log("k",this.categoria);
+      this.shareDataService.setCategoria(this.categoria);
+      this.shareDataService.setPrecio(this.precio);
+      this.shareDataService.setDesayuno(this.desayuno);
 
       const place: any = this.autocomplete.getPlace();
 
