@@ -13,7 +13,7 @@
                                   <input type="text" #inputPlaces id="inputPlaces" class="form-control" placeholder="Busqueda" aria-label="Search"
                                   aria-describedby="basic-addon1" [(ngModel)]="busqueda">
 
-                                  <a class="btn" role="button" (click)="buscador()" style="border:0px;background-color:rgb(253, 175, 175);">Busqueda</a>
+                                  <a class="btn" role="button" (click)="buscador()" style="border:0px;background-color:rgb(253, 175, 175);">Búsqueda</a>
                                   <div class="mapa" #divMap></div>
                                 </div>
                             </form>
@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Categoria</label>
+                            <label for="exampleFormControlSelect1">Categoría</label>
                             <select class="form-control" [(ngModel)]="categoria" name="categoria" id="exampleFormControlSelect1">
                                 <option value=0></option>
                                 <option value=1>⭐</option>
@@ -39,8 +39,8 @@
                             <label for="exampleFormControlSelect1">Desayuno</label>
                             <select class="form-control" [(ngModel)]="desayuno" id="exampleFormControlSelect1">
                                 <option value="a"></option>
-                                <option value="no">YES</option>
-                                <option value="yes">NO</option>
+                                <option value="no">No incluido</option>
+                                <option value="yes">Incluido</option>
                             </select>
                         </div>
                     </div>

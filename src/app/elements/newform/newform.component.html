@@ -1,20 +1,18 @@
-<div *ngIf="hoteles!=null; else espera" class="container-fluid mt-4 mb-4">
-  <div *ngFor="let hotel of hoteles" class="row" >
-          <app-cardhotels style="margin-bottom: 2vh;" [hotel]="hotel"></app-cardhotels>
+<div *ngIf="hoteles != null; else espera" class="container mt-4 mb-4">
+  <div class="row">
+    <div *ngFor="let hotel of hoteles" class="col" style="margin-bottom: 2vh;">
+      <app-cardhotels
+        style="margin-bottom: 2vh"
+        [hotel]="hotel"
+      ></app-cardhotels>
 
-
-
-    <!--<div *ngIf="hotel.poblacion==shareDataService.ciudad">
+      <!--<div *ngIf="hotel.poblacion==shareDataService.ciudad">
         <app-cardhotels></app-cardhotels>
       </div>-->
+    </div>
   </div>
-  <div *ngIf="contadorService.contador==0" >
+  <div style="text-align: center;" *ngIf="contadorService.contador == 0">
     No se ha encontrado ningún resultado
   </div>
 </div>
-<ng-template #espera>Buscando tus hoteles...</ng-template>
-
-
-
-
-
+<ng-template #espera> <div style="text-align: center;">Esperando datos...</div> </ng-template>

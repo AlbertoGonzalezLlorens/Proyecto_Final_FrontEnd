@@ -15,7 +15,7 @@
                 <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==4">⭐⭐⭐⭐</h5>
                 <h5 style="text-align: center;" *ngIf="consultaService.hoteles.categoria==5">⭐⭐⭐⭐⭐</h5>
                 <p style="text-align: justify; padding-right: 4vh;padding-left: 4vh;">{{consultaService.hoteles.descripcion}}</p>
-                <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;"><strong>Precio base</strong>: {{consultaService.hoteles.precioMin}}</p>
+                <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;"><strong>Precio base</strong>: {{consultaService.hoteles.precioMin}} €</p>
                 <!-- {{contactos[0] | json}} -->
             </div>
         </div>
@@ -89,7 +89,7 @@
 
             <h5 style="text-align: center; padding-top:1vh;">Infromación de la habitción</h5>
             <p style="text-align: center; padding-right: 4vh;padding-left: 4vh;margin-bottom:0vh">{{habitaciones[text-1].descripcion}}</p>
-            <p style="text-align: center; padding-top:-20vhr;"><strong>Sobrecoste</strong>:&nbsp;&nbsp;{{habitaciones[text-1].precio}}</p>
+            <p style="text-align: center; padding-top:-20vhr;"><strong>Coste adicional</strong>:&nbsp;&nbsp;{{habitaciones[text-1].precio}} €</p>
             <div *ngIf="boton_reserva==0" class="row justify-content-center">
               <button  class="btn btn-danger d-flex justify-content-center" type="submit" routerLink="/login">Reservar</button>
             </div>
